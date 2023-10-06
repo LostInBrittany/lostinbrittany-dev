@@ -1,0 +1,24 @@
+<footer id="site_footer">
+  
+  <p>
+    <span id="copyright_year">© 2023</span> 
+    <span id="copyright_holder"><a href="https://github.com/LostInBrittany">Horacio Gonzalez</a>.</span>  
+    🏗️ Written by <a href="https://twitter.com/LostInBrittany">@LostInBrittany</a> 🚀 Hosted on GitHub <br>
+    Source code in WebC, 🍦 vanilla JavaScript, 🕸️ semantic HTML, 🎨 progressively enhanced CSS, and a 🧂 dash of Markdown. 
+  </p>
+</footer>
+<style webc:scoped>
+
+  :host footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  :host footer > p {
+    font-family: var(--body-text-font);
+    max-width: 600px;
+    text-align: center;
+  }
+
+</style>

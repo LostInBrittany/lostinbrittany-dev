@@ -1,0 +1,44 @@
+<script webc:setup>
+function notLast() {
+  return index>0;
+}
+</script>
+<h1 class="title"><a :href="url" @raw="title"></a></h1>
+
+<div class="date-and-author" webc:if="date">
+  <span @raw="date" ></span> par <a href="/author">Horacio Gonzalez</a>
+</div>
+
+<div @html="displayed_content"></div>
+
+
+<hr webc:if="notLast()"></hr>
+
+<style webc:scoped>
+  :host {
+    padding: 15px;
+    text-align: justify;
+    max-width: 80ch;
+    line-height: 1.5;
+    margin: 0 auto;
+    color: #444;
+  }
+  .title {
+    margin-block-start: 0.5em;
+    margin-block-end: 0;
+  }
+  .date-and-author {
+    font-size: 0.8rem;
+  }
+  .img-right {
+    float:right;
+    margin-left: 10px;
+  }
+  @media (width<500px) {
+    .img-right {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+</style>

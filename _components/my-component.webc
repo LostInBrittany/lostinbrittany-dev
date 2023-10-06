@@ -1,0 +1,9 @@
+This is <code>my-component</code>
+
+<style webc:scoped>
+
+  :host code {
+    color:red;
+  }
+
+</style>

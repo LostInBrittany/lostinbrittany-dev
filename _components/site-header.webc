@@ -1,0 +1,59 @@
+<header>
+    <div id="banner-menu">
+      <a href="/">Home</a>
+      <a href="/author/">Author</a>
+      <a href="/archives/">Archives</a>
+      <a href="/links/">Links</a>
+    </div>
+    <div id="banner-logo"></div>
+    <div id="banner-title">
+      LostInBrittany's tech blog  
+    </div>
+</header>
+
+<style webc:scoped>
+  header { 
+    background-color: #c59158;
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: var(--header-font);
+    font-weight: 400;
+    --text-color: darkred;
+  }
+  #banner-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    column-gap: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  #banner-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  #banner-logo {
+    background-image: url(../img/banner.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    height: 250px;
+  }
+  #banner-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--text-color);
+  }
+  @media (width < 800px) {
+    #banner-logo {
+      height: 200px;
+    }
+  }
+  @media (width < 600px) {
+    #banner-logo {
+      height: 150px;
+    }
+  }  
+</style>

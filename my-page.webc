@@ -1,0 +1,15 @@
+---
+title: "WebC Example"
+layout: "layouts/home.webc"
+---
+
+<!doctype html>
+<head>
+  <title></title>
+
+  <!-- Default bucket -->
+  <style @raw="getBundle('css')" webc:keep></style>
+  <script @raw="getBundle('js')" webc:keep></script>
+</head>
+
+<my-component></my-component>

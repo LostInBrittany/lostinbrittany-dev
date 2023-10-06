@@ -1,0 +1,31 @@
+<script webc:setup>
+  let postCounts = collections.posts.length;
+
+  let latestPosts = collections.posts.slice(-5).reverse();
+
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title @html="global.title"></title>
+
+  <meta webc:is="head-commons" webc:nokeep :title="title">
+
+  <!-- Default bucket -->
+  <style @raw="getBundle('css')" webc:keep></style>
+  <script @raw="getBundle('js')" webc:keep></script>
+</head>
+<body>
+  
+  <main>
+    <site-header></site-header>
+    <home-body  webc:for="(index,item) in latestPosts"
+      :@title="item.data.title" :@date="item.data.date"
+      :@url="item.data.page.url"
+      :@displayed_content="excerpt(item.data.content, item.data.page.url)" 
+      :@index="latestPosts.length-1-index"></home-body>
+    <site-footer></site-footer>
+  </main>
+</body>
+</html>

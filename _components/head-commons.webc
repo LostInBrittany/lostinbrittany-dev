@@ -1,0 +1,58 @@
+<script webc:setup>
+  const author="Horacio Gonzalez";
+  const description="LostInBrittany's tech blog, reborn... again...";
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/img/favicon.png" type="image/png">
+
+<meta name="author" :content="author">
+<meta name="description" :content="description">
+
+<meta property="og:title" :content="title">
+<meta name="twitter:title" :content="title":content="title">
+<meta property="og:description" :content="description">
+<meta property="twitter:description" :content="description">
+<meta property="og:image" content="https://drowstar.com/img/headshot.jpg">
+<meta name="twitter:image" content="https://drowstar.com/img/headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"  webc:keep>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin  webc:keep>
+<link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet"  webc:keep>
+
+
+<style>
+  body {
+    background: #eee;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    --body-text-font: sans-serif;
+    --header-font: 'Antonio', sans-serif;
+    --header-color: darkred;
+    --link-color: darkred;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: var(--body-text-font);
+  }
+  main a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  main h1, main h2, main h3, main h4, main h5, main h6 {
+    color: var(--header-color);
+  }
+
+
+</style>
+
+  

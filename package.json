@@ -1,0 +1,32 @@
+{
+  "name": "lostinbrittany.dev",
+  "version": "1.0.0",
+  "description": "LostInBrittany's blog, reborn... again...",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LostInBrittany/lostinbrittany.dev.git"
+  },
+  "keywords": [
+    "blog",
+    "lostinbrittany",
+    "dev",
+    "devrel",
+    "geek"
+  ],
+  "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LostInBrittany/lostinbrittany.dev/issues"
+  },
+  "homepage": "https://github.com/LostInBrittany/lostinbrittany.dev#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy-plugin-webc": "0.11.1",
+    "jsdom": "22.1.0"
+  }
+}
