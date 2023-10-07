@@ -6,7 +6,7 @@ tags: []
 locale: 'en'
 ---
 
-<img class="img-right" src="/img/lostinbrittany_photo_250px.jpg" alt="Horacio Gonzalez"></img>
+<img class="img-right" src="/img/lostinbrittany-photo-250px.jpg" alt="Horacio Gonzalez"></img>
 
 Spaniard lost in Brittany, coder, speaker, dreamer and all-around geek.
 
