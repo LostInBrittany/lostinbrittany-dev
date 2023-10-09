@@ -33,7 +33,7 @@
     text-decoration: none;
   }
   #banner-logo {
-    background-image: url(../img/banner.jpeg);
+    background-image: url(/img/banner.jpeg);
     background-size: contain;
     background-repeat: no-repeat; 
     background-position: center;

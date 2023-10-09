@@ -1,5 +1,5 @@
 ---
-locale: en
+locale: fr
 layout: layouts/home.webc
 ---
-Homepage
+Homepage in French

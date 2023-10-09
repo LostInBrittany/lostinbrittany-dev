@@ -1,7 +1,19 @@
 <script webc:setup>
-  let postCounts = collections.posts.length;
 
-  let latestPosts = collections.posts.slice(-5).reverse();
+function latestPosts() {
+
+  console.log("Data",locale,this);
+  
+  let collectionName = 'posts';
+  if (locale) {
+    collectionName = locale;
+  }
+  let postCounts = collections[collectionName].length;
+  let latestPosts = collections[collectionName].slice(-5).reverse();
+
+  //console.log("i18n", locale, collectionName, latestPosts);
+  return latestPosts;
+}
 
 </script>
 
@@ -20,11 +32,11 @@
   
   <main>
     <site-header></site-header>
-    <home-body  webc:for="(index,item) in latestPosts"
+    <home-body  webc:for="(index,item) in latestPosts()"
       :@title="item.data.title" :@date="item.data.date"
       :@url="item.data.page.url"
       :@displayed_content="excerpt(item.data.content, item.data.page.url)" 
-      :@index="latestPosts.length-1-index"></home-body>
+      :@index="latestPosts().length-1-index"></home-body>
     <site-footer></site-footer>
   </main>
 </body>
