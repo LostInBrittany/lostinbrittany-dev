@@ -1,6 +1,6 @@
 ---
 locale: fr
 layout: layouts/home.webc
-permalink: '/fr/'
+permalink: '/fr/index.html'
 ---
-Homepage in French
+Homepage

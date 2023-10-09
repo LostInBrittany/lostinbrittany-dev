@@ -1,7 +1,19 @@
 <script webc:setup>
 
-function latestPosts() {
+/**
+function latestPosts(param) {
+  
+  
+  let localePosts = collections.posts.filter( (post) => {
+    return post.data.locale == locale;
+  });
+
+  console.log('\n \n \n localePosts',  param, locale);
+
+  // console.log('\n \n \n localePosts',  param, this.page, locale, localePosts.map( (post)=> post.data.title ), localePosts.map( (post)=> post.page ));
+
   let collectionName = 'posts';
+
   switch (locale) {
     case 'fr': 
     case 'es': 
@@ -17,7 +29,17 @@ function latestPosts() {
   //console.log("i18n", locale, collectionName, latestPosts);
   return latestPosts;
 }
+*/
+function filterPostsByLocale(posts, locale) {
 
+  let localePosts = posts.filter( (post) => {
+    return post.data.locale == locale;
+  });
+
+  let latestPosts = localePosts.slice(-5).reverse();
+
+  return latestPosts;
+}
 </script>
 
 <!doctype html>
@@ -35,11 +57,11 @@ function latestPosts() {
   
   <main>
     <site-header></site-header>
-    <home-body  webc:for="(index,item) in latestPosts()"
+    <home-body  webc:for="(index,item) in filterPostsByLocale(collections.posts, locale)"
       :@title="item.data.title" :@date="item.data.date"
       :@url="item.data.page.url"
       :@displayed_content="excerpt(item.data.content, item.data.page.url)" 
-      :@index="latestPosts().length-1-index"></home-body>
+      :@index="filterPostsByLocale(collections.posts, locale).length-1-index"></home-body>
     <site-footer></site-footer>
   </main>
 </body>

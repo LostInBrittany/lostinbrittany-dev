@@ -1,6 +1,6 @@
 ---
 locale: en
 layout: layouts/home.webc
-permalink: '/'
+permalink: '/index.html'
 ---
 Homepage

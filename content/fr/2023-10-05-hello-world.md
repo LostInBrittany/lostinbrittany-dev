@@ -3,7 +3,7 @@ layout: layouts/post.webc
 title: 'Hello world!'
 date: '2023-10-05'
 permalink: '/fr/hello-world/'
-tags: ['fr']
+tags: ['posts']
 locale: 'fr'
 ---
 
