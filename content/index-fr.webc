@@ -2,5 +2,6 @@
 locale: fr
 layout: layouts/home.webc
 permalink: '/fr/index.html'
+title: LostInBrittany's tech blog
 ---
 Homepage
