@@ -9,11 +9,12 @@ locale: 'en'
 
 ### My blog is reborn... again...
 
+
+<img class="img-right" src="/img/lostinbrittany_avatar_2023_250px.png" alt="LostInBrittany"></img>
+
 Hello to everyone out there – tech enthusiasts, wanderers, artists, and those just plain curious!
 
 If you ventured into the varied pages of [LostInBrittany.org](https://lostinbrittany.org/blog) in the past, you'd remember a mix of topics – from tech to art, to even optical illusions. That blog was where I combined my love for drawing with the exciting world of digital technology. Over time, priorities shifted, and while the old platform never really went away, its primary focus evolved.
-
-<img class="img-right" src="/img/lostinbrittany_avatar_2023_250px.png" alt="LostInBrittany"></img>
 
 Over the past 6 years, my journey took me deep into the heart of Developer Relations. From crafting content, participating in technical conferences & meetups as an attendee, speaker or organizer, managing a corporate tech blog, to hosting webinars and live streaming tech content or conducting tech labs – it's been a fulfilling ride. My drive to share, learn, and illustrate the world of technology hasn't waned but has grown stronger.
 

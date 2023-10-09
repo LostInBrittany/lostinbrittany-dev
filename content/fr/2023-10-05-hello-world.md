@@ -9,11 +9,12 @@ locale: 'fr'
 
 ### Mon blog renaît... une fois de plus...
 
+<img class="img-right" src="/img/lostinbrittany_avatar_2023_250px.png" alt="LostInBrittany"></img>
+
 Salut à vous – passionnés de tech, aventuriers, artistes, et simplement curieux !
 
 Si vous avez déjà parcouru [LostInBrittany.org](https://lostinbrittany.org/blog) par le passé, cela évoquera sans doute des souvenirs variés – allant de la tech à l'art, jusqu'aux illusions d'optique. Sur ce blog, j'avais fusionné mon amour pour le dessin avec le monde fascinant du numérique. Avec le temps, mes priorités ont évolué, mais l'esprit de l'ancienne plateforme n'a jamais vraiment disparu, même si son orientation a changé.
 
-<img class="img-right" src="/img/lostinbrittany_avatar_2023_250px.png" alt="LostInBrittany"></img>
 
 Durant ces 6 dernières années, je me suis plongé dans l'univers des Relations Développeurs. Entre la création de contenus, ma participation active à diverses conférences et meetups, la gestion d'un blog tech d'entreprise, l'animation de webinaires et de diffusions en direct ou encore la conduite d'ateliers techniques, l'expérience a été riche et épanouissante. Mon envie de partager, d'apprendre et de dessiner autour du monde tech n'a fait que grandir.
 

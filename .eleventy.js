@@ -33,10 +33,10 @@ module.exports = function(eleventyConfig) {
     let result = '';
     let paragraphCount = 0;
     for (const element of elements) {
-      if (element.tagName.toLowerCase() === 'p' && paragraphCount < 2) {
-        result += element.textContent + '\n';
+      if (element.tagName.toLowerCase() === 'p' && paragraphCount < 3) {
+        result += element.outerHTML + '\n';
         paragraphCount++;
-      } else if (paragraphCount >= 2) {
+      } else if (paragraphCount >= 3) {
         // We've already found the first two paragraphs, so break the loop
         break;
       } else {

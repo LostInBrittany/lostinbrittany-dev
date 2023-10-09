@@ -9,6 +9,8 @@ locale: 'en'
 
 ### Why not simply use Wordpress?
 
+<img class="img-right img-250px" src="/img/why_not_wordpress.png" alt="LostInBrittany"></img>
+
 Hello there, folks!
 
 If you've been following my online adventures on [LostInBrittany.org](https://lostinbrittany.org/blog) for the past couple of decades, you've seen it evolve from a mishmash of topics to a place where tech reigns supreme. I've used trusty old WordPress for this journey, running everything from my personal blog to corporate platforms like the current [OVHcloud blog](https://blog.ovhcloud.com). Plus, I've set up countless blogs for friends, family, and various groups.
@@ -24,6 +26,8 @@ Now, you might wonder why I picked Eleventy from the plethora of static site gen
 First things first, Eleventy plays nice with the web. It's crafted in JavaScript, which makes it feel right at home in the web development world. Plus, it's wicked fast. And when I say fast, I mean that generating a site with hundreds of pages only take a couple of seconds.
 
 ### A world of template options
+
+<img class="img-right img-250px" src="/img/let_use_11ty.png" alt="LostInBrittany"></img>
 
 Eleventy doesn't box you into a specific template language. It's a playground of choices, and I've enjoyed exploring them.
 

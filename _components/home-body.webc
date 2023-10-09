@@ -19,6 +19,7 @@ function notLast() {
     padding: 15px;
     text-align: justify;
     max-width: 80ch;
+    width: 100%;
     line-height: 1.5;
     margin: 0 auto;
     color: #444;
@@ -30,9 +31,12 @@ function notLast() {
   .date-and-author {
     font-size: 0.8rem;
   }
-  .img-right {
+  img.img-right {
     float:right;
     margin-left: 10px;
+  }
+  img.img-250px {
+    width: 250px;
   }
   @media (width<500px) {
     .img-right {

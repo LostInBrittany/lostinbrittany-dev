@@ -9,6 +9,8 @@ locale: 'fr'
 
 ### Pourquoi ne pas simplement utiliser WordPress ?
 
+<img class="img-right img-250px" src="/img/why_not_wordpress.png" alt="LostInBrittany"></img>
+
 Salut à tous !
 
 Si vous avez suivi mon parcours en ligne sur [LostInBrittany.org](https://lostinbrittany.org/blog) au cours des deux dernières décennies, vous avez pu observer l'évolution de ce site, passant d'une variété de sujets à un espace où la technologie occupe une place importante. J'ai eu le plaisir d'utiliser WordPress tout au long de ce voyage, que ce soit pour gérer mon blog personnel ou des plateformes plus conséquentes, comme l'actuel [blog OVHcloud](https://blog.ovhcloud.com). De plus, j'ai eu l'occasion de créer quelques blogs pour des amis, des membres de ma famille et diverses associations.
@@ -24,6 +26,8 @@ Vous vous demandez peut-être pourquoi j'ai choisi Eleventy parmi la multitude d
 Tout d'abord, Eleventy s'entend bien avec le web. Il est écrit en JavaScript, ce qui le fait se sentir comme chez lui dans le monde du développement web. De plus, il est incroyablement rapide. Et quand je dis rapide, je veux dire que générer un site avec des centaines de pages ne prend que quelques secondes.
 
 ### Un monde d'options de *templates*
+
+<img class="img-right img-250px" src="/img/let_use_11ty.png" alt="LostInBrittany"></img>
 
 Eleventy ne vous enferme pas dans un langage de modèle (*template language*) spécifique. C'est un terrain de jeu plein d'options, et j'ai pris plaisir à les explorer.
 
