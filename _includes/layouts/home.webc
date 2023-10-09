@@ -1,35 +1,5 @@
 <script webc:setup>
 
-/**
-function latestPosts(param) {
-  
-  
-  let localePosts = collections.posts.filter( (post) => {
-    return post.data.locale == locale;
-  });
-
-  console.log('\n \n \n localePosts',  param, locale);
-
-  // console.log('\n \n \n localePosts',  param, this.page, locale, localePosts.map( (post)=> post.data.title ), localePosts.map( (post)=> post.page ));
-
-  let collectionName = 'posts';
-
-  switch (locale) {
-    case 'fr': 
-    case 'es': 
-      colectionName = locale;
-      break;
-  }
-
-  let postCounts = collections[collectionName].length;
-  let latestPosts = collections[collectionName].slice(-5).reverse();
-
-
-
-  //console.log("i18n", locale, collectionName, latestPosts);
-  return latestPosts;
-}
-*/
 function filterPostsByLocale(posts, locale) {
 
   let localePosts = posts.filter( (post) => {

@@ -1,9 +1,12 @@
 <header>
     <div id="banner-menu">
-      <a href="/">Home</a>
-      <a href="/author/">Author</a>
-      <a href="/archives/">Archives</a>
-      <a href="/links/">Links</a>
+      <script webc:type="js" webc:root>
+        `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
+        <a href="${$data.links[$data.locale].author.url}">${$data.links[$data.locale].author.name}</a>`
+      </script>
+      <span>
+        <a href="/">en</a>-<a href="/fr/">fr</a>
+      </span>
     </div>
     <div id="banner-logo"></div>
     <div id="banner-title">

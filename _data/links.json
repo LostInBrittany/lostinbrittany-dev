@@ -1,0 +1,32 @@
+{
+  "en": {
+    "home": {
+      "name": "Home",
+      "url": "/"
+    },
+    "author": {
+      "name": "Author",
+      "url": "/author"
+    }
+  },
+  "fr": {
+    "home": {
+      "name": "Accueil",
+      "url": "/fr/"
+    },
+    "author": {
+      "name": "Auteur",
+      "url": "/fr/auteur"
+    }
+  },
+  "es": {
+    "home": {
+      "name": "Inicio",
+      "url": "/es/"
+    },
+    "author": {
+      "name": "Autor",
+      "url": "/autor"
+    }
+  }
+}

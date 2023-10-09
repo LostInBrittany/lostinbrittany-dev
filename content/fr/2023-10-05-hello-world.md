@@ -25,7 +25,7 @@ Je vous invite chaleureusement à me rejoindre dans cette nouvelle étape. Vos i
 
 Aux nouveaux départs et à une passion qui ne faiblit pas ! 🚀🎨💻
 
-Restez curieux et à l'écoute !
+Restez curieux et à restez connectés !
 
 Amicalement,
 
