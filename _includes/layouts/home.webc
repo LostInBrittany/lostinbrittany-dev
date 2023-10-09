@@ -1,15 +1,18 @@
 <script webc:setup>
 
 function latestPosts() {
-
-  console.log("Data",locale,this);
-  
   let collectionName = 'posts';
-  if (locale) {
-    collectionName = locale;
+  switch (locale) {
+    case 'fr': 
+    case 'es': 
+      colectionName = locale;
+      break;
   }
+
   let postCounts = collections[collectionName].length;
   let latestPosts = collections[collectionName].slice(-5).reverse();
+
+
 
   //console.log("i18n", locale, collectionName, latestPosts);
   return latestPosts;
