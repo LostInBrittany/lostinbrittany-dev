@@ -18,7 +18,6 @@ talk_tags:
   - "Web Components"
   - Lit
   - Frontend
-permalink: /talks/htmx-web-components-sunny-tech-2025/
 ---
 Envie de découvrir htmx 2.0 et les Web Components en mettant les mains dans le code ? Dans ce lab, vous apprendrez à utiliser htmx 2.0 pour simplifier le développement frontend, en explorant ses nouvelles fonctionnalités à travers des exercices pratiques et guidés.
 

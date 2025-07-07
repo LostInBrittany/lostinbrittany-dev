@@ -29,6 +29,7 @@
       :@talk_tags="talk_tags"
       :@displayed_content="content"
       :@url="page.url"
+      :@filePathStem="page.filePathStem"
     ></talk-detail>
     <site-footer></site-footer>
   </main>
