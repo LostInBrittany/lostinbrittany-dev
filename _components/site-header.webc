@@ -2,10 +2,10 @@
     <div id="banner-menu">
       <script webc:type="js" webc:root>
         `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
-        <a href="${$data.links[$data.locale].author.url}">${$data.links[$data.locale].author.name}</a>`
+        <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>`
       </script>
       <span>
-        <a href="/">en</a>-<a href="/fr/">fr</a>
+        <a href="/">en</a>-<a href="/fr/">fr</a>-<a href="/es/">es</a>
       </span>
     </div>
     <div id="banner-logo"></div>

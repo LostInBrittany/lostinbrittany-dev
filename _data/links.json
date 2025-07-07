@@ -4,9 +4,9 @@
       "name": "Home",
       "url": "/"
     },
-    "author": {
-      "name": "Author",
-      "url": "/author"
+    "about": {
+      "name": "About",
+      "url": "/about/"
     }
   },
   "fr": {
@@ -14,9 +14,9 @@
       "name": "Accueil",
       "url": "/fr/"
     },
-    "author": {
-      "name": "Auteur",
-      "url": "/fr/auteur"
+    "about": {
+      "name": "À propos",
+      "url": "/fr/a-propos/"
     }
   },
   "es": {
@@ -24,9 +24,9 @@
       "name": "Inicio",
       "url": "/es/"
     },
-    "author": {
-      "name": "Autor",
-      "url": "/autor"
+    "about": {
+      "name": "Sobre mí",
+      "url": "/es/sobre-mi/"
     }
   }
 }

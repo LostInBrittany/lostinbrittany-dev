@@ -1,0 +1,7 @@
+---
+locale: es
+layout: layouts/home.webc
+permalink: '/es/index.html'
+title: LostInBrittany's tech blog
+---
+Homepage

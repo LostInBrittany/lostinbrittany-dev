@@ -30,7 +30,7 @@ function filterPostsByLocale(posts, locale) {
     <home-body  webc:for="(index,item) in filterPostsByLocale(collections.posts, locale)"
       :@title="item.data.title" :@date="item.data.date"
       :@url="item.data.page.url"
-      :@displayed_content="excerpt(item.data.content, item.data.page.url)" 
+      :@displayed_content="excerpt(item.templateContent, item.data.page.url)" 
       :@index="filterPostsByLocale(collections.posts, locale).length-1-index"></home-body>
     <site-footer></site-footer>
   </main>
