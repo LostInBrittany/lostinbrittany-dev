@@ -6,7 +6,7 @@
 <head>
   <title @html="title"></title>
 
-  <meta webc:is="head-commons" webc:nokeep :title="title">
+  <meta webc:is="head-commons" webc:nokeep :title="title" :canonical_url="canonical_url">
 
   <!-- Default bucket -->
   <style @raw="getBundle('css')" webc:keep></style>
