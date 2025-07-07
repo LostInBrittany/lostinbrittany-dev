@@ -27,11 +27,11 @@ function filterPostsByLocale(posts, locale) {
   
   <main>
     <site-header></site-header>
-    <home-body  webc:for="(index,item) in filterPostsByLocale(collections.posts, locale)"
+    <post-details  webc:for="(index,item) in filterPostsByLocale(collections.posts, locale)"
       :@title="item.data.title" :@date="item.data.date"
       :@url="item.data.page.url"
       :@displayed_content="excerpt(item.templateContent, item.data.page.url)" 
-      :@index="filterPostsByLocale(collections.posts, locale).length-1-index"></home-body>
+      :@index="filterPostsByLocale(collections.posts, locale).length-1-index"></post-details>
     <site-footer></site-footer>
   </main>
 </body>

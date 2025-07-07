@@ -16,10 +16,10 @@
   
   <main>
     <site-header></site-header>
-    <home-body 
+    <post-details 
       :@title="title" :@date="date"
       :@displayed_content="content"
-      :@url="page.url"></home-body>
+      :@url="page.url"></post-details>
     <site-footer></site-footer>
   </main>
 </body>

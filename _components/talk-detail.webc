@@ -1,0 +1,48 @@
+<script webc:setup>
+</script>
+
+<div class="talk-detail">
+    <h1 @text="title"></h1>
+    <p class="event"><strong>Event:</strong> <a :href="event_url" target="_blank" @text="event"></a></p>
+    <p class="date"><strong>Date:</strong> <span @text="date"></span></p>
+    <p class="location"><strong>Location:</strong> <span @text="location"></span></p>
+    <div class="abstract">
+      <h2>Abstract</h2>
+      <div @raw="displayed_content"></div>
+    </div>
+    <div class="links">
+      <a :href="slides_pdf" class="btn" target="_blank">Download Slides (PDF)</a>
+      <a :if="slides_url" :href="slides_url" class="btn" target="_blank">View on Notist</a>
+      <a :if="video_url" :href="video_url" class="btn" target="_blank">Watch Video</a>
+    </div>
+    <div class="tags" :if="talk_tags?.length">
+        <h3>Tags</h3>
+        <ul>
+            <li webc:for="tag of talk_tags" @text="tag"></li>
+        </ul>
+    </div>
+</div>
+<style>
+  .talk-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .links a, .tags a {
+    margin-right: 1rem;
+  }
+  .tags ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .tags li {
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+  }
+</style>

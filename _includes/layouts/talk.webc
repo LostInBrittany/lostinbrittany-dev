@@ -1,0 +1,46 @@
+<script webc:setup>
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title @html="title"></title>
+
+  <meta webc:is="head-commons" webc:nokeep :title="title">
+
+  <!-- Default bucket -->
+  <style @raw="getBundle('css')" webc:keep></style>
+  <script @raw="getBundle('js')" webc:keep></script>
+</head>
+<body>
+
+  <main>
+    <site-header></site-header>
+    <talk-detail
+      :@title="title"
+      :@event="event"
+      :@event_url="event_url"
+      :@date="date"
+      :@location="location"
+      :@language="language"
+      :@slides_pdf="slides_pdf"
+      :@slides_url="slides_url"
+      :@video_url="video_url"
+      :@talk_tags="talk_tags"
+      :@displayed_content="content"
+      :@url="page.url"
+    ></talk-detail>
+    <site-footer></site-footer>
+  </main>
+</body>
+</html>
+<style>
+  .talk-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .links a {
+    margin-right: 1rem;
+  }
+</style>

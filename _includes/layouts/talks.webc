@@ -1,0 +1,67 @@
+<script webc:setup>
+function formatTalkDate(dateString) {
+  if (!dateString) return '';
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' });
+}
+</script>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title @html="title"></title>
+  <meta webc:is="head-commons" webc:nokeep :title="title">
+  <style @raw="getBundle('css')" webc:keep></style>
+  <script @raw="getBundle('js')" webc:keep></script>
+</head>
+<body>
+  <main>
+    <site-header></site-header>
+    <div class="talks-list">
+      <h1 @text="title"></h1>
+      <table>
+
+        <tbody>
+          <tr webc:for="talk of [...collections.talks].reverse()">
+            <td><a :href="talk.url" @text="talk.data.title"></a></td>
+            <td @text="talk.data.event"></td>
+            <td @text="formatTalkDate(talk.data.date)" style="white-space: nowrap;"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <site-footer></site-footer>
+  </main>
+</body>
+</html>
+<style>
+  .talks-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .talks-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-style: hidden; /* No borders */
+  }
+  .talks-list td {
+    padding: 0.75rem 0.5rem;
+    text-align: left;
+    border: none; /* No borders */
+    border-bottom: 1px solid #eee; /* Subtle line for rows */
+  }
+
+  .talks-list tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  .talks-list td a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--link-color);
+  }
+  .talks-list a:hover {
+    text-decoration: underline;
+  }
+</style>

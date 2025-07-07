@@ -2,7 +2,8 @@
     <div id="banner-menu">
       <script webc:type="js" webc:root>
         `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
-        <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>`
+        <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>
+        <a href="${$data.links[$data.locale].talks.url}">${$data.links[$data.locale].talks.name}</a>`
       </script>
       <span>
         <a href="/">en</a>-<a href="/fr/">fr</a>-<a href="/es/">es</a>

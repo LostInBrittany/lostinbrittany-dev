@@ -7,6 +7,10 @@
     "about": {
       "name": "About",
       "url": "/about/"
+    },
+    "talks": {
+      "name": "Talks",
+      "url": "/talks/"
     }
   },
   "fr": {
@@ -17,6 +21,10 @@
     "about": {
       "name": "À propos",
       "url": "/fr/a-propos/"
+    },
+    "talks": {
+      "name": "Conférences",
+      "url": "/talks/"
     }
   },
   "es": {
@@ -27,6 +35,10 @@
     "about": {
       "name": "Sobre mí",
       "url": "/es/sobre-mi/"
+    },
+    "talks": {
+      "name": "Charlas",
+      "url": "/talks/"
     }
   }
 }
