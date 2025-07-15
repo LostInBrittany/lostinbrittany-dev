@@ -18,10 +18,10 @@
     </div>
     <div class="links">
       <a :href="slides_pdf" class="btn" target="_blank">Download Slides (PDF)</a>
-      <a :if="slides_url" :href="slides_url" class="btn" target="_blank">View on Notist</a>
-      <a :if="video_url" :href="video_url" class="btn" target="_blank">Watch Video</a>
+      <a webc:if="slides_url" :href="slides_url" class="btn" target="_blank">View on Notist</a>
+      <a webc:if="video_url" :href="video_url" class="btn" target="_blank">Watch Video</a>
     </div>
-    <div class="tags" :if="talk_tags?.length">
+    <div class="tags" webc:if="talk_tags?.length">
         <h3>Tags</h3>
         <ul>
             <li webc:for="tag of talk_tags" @text="tag"></li>

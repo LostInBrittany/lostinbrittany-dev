@@ -19,7 +19,7 @@ function notLast() {
     padding: 15px;
     text-align: justify;
     max-width: 80ch;
-    width: 100%;
+    width: calc(100% - 30 px);
     line-height: 1.5;
     margin: 0 auto;
     color: #444;
