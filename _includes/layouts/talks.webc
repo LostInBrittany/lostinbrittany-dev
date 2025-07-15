@@ -1,8 +1,22 @@
 <script webc:setup>
+const talksByYear = {};
+// Group talks by year
+for (const talk of [...collections.talks].reverse()) {
+  const year = new Date(talk.data.date).getFullYear();
+  if (!talksByYear[year]) {
+    talksByYear[year] = [];
+  }
+  talksByYear[year].push(talk);
+}
+
+// Get a sorted list of years (descending)
+const years = Object.keys(talksByYear).sort((a, b) => b - a);
+
 function formatTalkDate(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' });
+  // Format date to show only month and day, as year is in the heading
+  return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
 </script>
 
@@ -19,16 +33,18 @@ function formatTalkDate(dateString) {
     <site-header></site-header>
     <div class="talks-list">
       <h1 @text="title"></h1>
-      <table>
-
-        <tbody>
-          <tr webc:for="talk of [...collections.talks].reverse()">
-            <td><a :href="talk.url" @text="talk.data.title"></a></td>
-            <td @text="talk.data.event"></td>
-            <td @text="formatTalkDate(talk.data.date)" style="white-space: nowrap;"></td>
-          </tr>
-        </tbody>
-      </table>
+      <div webc:for="year of years">
+        <h2 @text="year"></h2>
+        <table>
+          <tbody>
+            <tr webc:for="talk of talksByYear[year]">
+              <td><a :href="talk.url" @text="talk.data.title"></a></td>
+              <td @text="talk.data.event"></td>
+              <td @text="formatTalkDate(talk.data.date)" style="white-space: nowrap;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <site-footer></site-footer>
   </main>

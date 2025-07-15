@@ -3,6 +3,9 @@
   function getSlug(url) {
     return url.split('/').at(-2);
   }
+  function getYear(date) {
+    return new Date(date).getFullYear();
+  }
 </script>
 
 
@@ -13,7 +16,7 @@
     <p class="location"><strong>Location:</strong> <span @text="location"></span></p>
     <div class="abstract">
       <h2>Abstract</h2>
-      <img :src="'/img/talks/' + getSlug(url) + '.jpg'" :alt="title + ' slide deck cover'" class="talk-cover-image" />
+      <img :src="'/img/talks/' + getYear(date) + '/' + getSlug(url) + '.jpg'" :alt="title + ' slide deck cover'" class="talk-cover-image" />
       <div @raw="displayed_content"></div>
     </div>
     <div class="links">
