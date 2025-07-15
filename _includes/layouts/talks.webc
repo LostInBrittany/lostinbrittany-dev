@@ -3,10 +3,13 @@ const talksByYear = {};
 // Group talks by year
 for (const talk of [...collections.talks].reverse()) {
   const year = new Date(talk.data.date).getFullYear();
-  if (!talksByYear[year]) {
-    talksByYear[year] = [];
+  // I want to avoid the NaN year
+  if (Number.isFinite(year)) {
+    if (!talksByYear[year]) {
+      talksByYear[year] = [];
+    }
+    talksByYear[year].push(talk);
   }
-  talksByYear[year].push(talk);
 }
 
 // Get a sorted list of years (descending)
@@ -34,7 +37,7 @@ function formatTalkDate(dateString) {
     <div class="talks-list">
       <h1 @text="title"></h1>
       <div webc:for="year of years">
-        <h2 @text="year"></h2>
+        <h2 id="year" @text="year"></h2>
         <table>
           <tbody>
             <tr webc:for="talk of talksByYear[year]">
@@ -79,5 +82,8 @@ function formatTalkDate(dateString) {
   }
   .talks-list a:hover {
     text-decoration: underline;
+  }
+  #year {
+    text-align: center;
   }
 </style>
