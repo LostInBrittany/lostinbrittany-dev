@@ -12,7 +12,7 @@ location: "Madrid, Spain"
 language: "en"
 slides_pdf: "/slides/2025-03_05_Madrid-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
 slides_url: "https://noti.st/lostinbrittany/RTCg7d/mcp-using-java-and-quarkus-to-bridge-llms-with-your-applications-and-data"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=b_h308CZsNc&list=PLZsghq6BxISSY62UCrZEvL7KhGfY3-_YT&index=2"
 talk_tags:
   - MCP
   - Java

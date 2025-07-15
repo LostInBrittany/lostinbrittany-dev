@@ -12,7 +12,7 @@ location: "Stockholm, Sweden"
 language: "en"
 slides_pdf: "/slides/2025-02-04_Jfokus_htmx-2-0-web-components-a-perfect-match-for-frontend-development.pdf"
 slides_url: "https://noti.st/lostinbrittany/O2j64s/htmx-2-0-web-components-a-perfect-match-for-frontend-development"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=kNANomvFz-E&list=PLZsghq6BxISSY62UCrZEvL7KhGfY3-_YT&index=3"
 talk_tags:
   - htmx
   - "Web Components"

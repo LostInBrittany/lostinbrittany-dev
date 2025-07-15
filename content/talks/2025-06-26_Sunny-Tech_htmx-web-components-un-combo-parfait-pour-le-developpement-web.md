@@ -12,7 +12,7 @@ location: "Montpellier, France"
 language: "fr"
 slides_pdf: "/slides/2025-06-26_Sunny-Tech_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: "https://noti.st/lostinbrittany/VZ8Bc8/htmx-web-components-un-combo-parfait-pour-le-developpement-web"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=s2GXvJuGJg8&list=PLZsghq6BxISSY62UCrZEvL7KhGfY3-_YT"
 talk_tags:
   - htmx
   - "Web Components"
