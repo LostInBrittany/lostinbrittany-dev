@@ -5,14 +5,14 @@ tags:
 locale: "en"
 
 title: "Building Smarter MCP Servers: Generic vs. Domain-Specific Approaches"
-event: "JUG Summer Camp"
+event: "Zenika Night Clazz Nantes"
 event_url: "hhttps://www.jugsummercamp.org/edition/16/presentations/cmbnc7aae04adp93m6814qhj4"
-date: "2025-09-05"
-location: "La Rochelle, France"
+date: "2025-09-23"
+location: "Nantes, France"
 language: "fr"
-slides_pdf: "/slides/2025-09-05_JUG_Summer_Camp_-_Building_smarter_MCP_servers.pdf"
-slides_url: "https://noti.st/lostinbrittany/Zf3h6d/building-smarter-mcp-servers-generic-vs-domain-specific-approaches"
-video_url: "https://www.youtube.com/watch?v=YSDi3b7y8Hw"
+slides_pdf: "/slides/2025-09-23_Zenika_Night_Clazz_-_Building_smarter_MCP_servers.pdf"
+slides_url: "https://noti.st/lostinbrittany/a5kjeT/building-smarter-mcp-servers-generic-vs-domain-specific-approaches"
+video_url: ""
 talk_tags:
   - MCP
   - AI
