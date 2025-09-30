@@ -30,6 +30,7 @@
                     </svg>
                   </span>
                   <span class="language-code">${currentLocale.toUpperCase()}</span>
+                  <span class="language-caret" aria-hidden="true">▾</span>
                 </summary>
                 <ul>
                   ${languages.map(lang => `
@@ -77,6 +78,7 @@
   #banner-menu a {
     color: var(--text-color);
     text-decoration: none;
+    cursor: pointer;
   }
   #banner-menu a.active {
     font-weight: 600;
@@ -93,9 +95,23 @@
     align-items: center;
     column-gap: 0.5rem;
     cursor: pointer;
+    background: rgba(255, 248, 240, 0.85);
+    border: 1px solid rgba(139, 0, 0, 0.25);
+    border-radius: 999px;
+    padding: 0.35rem 0.75rem;
+    backdrop-filter: blur(2px);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .language-dropdown summary::-webkit-details-marker {
     display: none;
+  }
+  .language-dropdown summary:hover,
+  .language-dropdown[open] summary,
+  .language-dropdown summary:focus-visible {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(139, 0, 0, 0.35);
+    box-shadow: 0 0.15rem 0.35rem rgba(0, 0, 0, 0.12);
+    outline: none;
   }
   .language-icon svg {
     width: 1.25rem;
@@ -108,6 +124,10 @@
     font-size: 0.9rem;
     letter-spacing: 0.05em;
     color:  var(--text-color);
+  }
+  .language-caret {
+    font-size: 0.75rem;
+    transform: translateY(-0.05rem);
   }
   .language-dropdown ul {
     position: absolute;
@@ -132,6 +152,7 @@
     display: block;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
+    cursor: pointer;
   }
   .language-dropdown a:hover,
   .language-dropdown a.active {
