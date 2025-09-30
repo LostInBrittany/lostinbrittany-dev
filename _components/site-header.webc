@@ -4,14 +4,47 @@
       LostInBrittany's tech blog  
     </div>
     <div id="banner-menu">
-      <script webc:type="js" webc:root>
-        `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
-        <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>
-        <a href="${$data.links[$data.locale].talks.url}">${$data.links[$data.locale].talks.name}</a>`
-      </script>
-      <span>
-        <a href="/">en</a>-<a href="/fr/">fr</a>-<a href="/es/">es</a>
-      </span>
+      <nav>
+        <script webc:type="js" webc:root>
+          `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
+          <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>
+          <a href="${$data.links[$data.locale].talks.url}">${$data.links[$data.locale].talks.name}</a>`
+        </script>
+      </nav>
+      <div id="language-picker">
+        <script webc:type="js" webc:root>
+          (() => {
+            const languages = [
+              { code: 'en', name: 'English', url: '/' },
+              { code: 'fr', name: 'Français', url: '/fr/' },
+              { code: 'es', name: 'Español', url: '/es/' },
+            ];
+            const currentLocale = ($data.locale || 'en').toLowerCase();
+            return `
+              <details class="language-dropdown">
+                <summary aria-label="Select language">
+                  <span class="language-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+                    </svg>
+                  </span>
+                  <span class="language-code">${currentLocale.toUpperCase()}</span>
+                </summary>
+                <ul>
+                  ${languages.map(lang => `
+                    <li>
+                      <a href="${lang.url}" class="${lang.code === currentLocale ? 'active' : ''}">
+                        ${lang.name}
+                      </a>
+                    </li>
+                  `).join('')}
+                </ul>
+              </details>
+            `;
+          })()
+        </script>
+      </div>
     </div>
 </header>
 
@@ -26,15 +59,83 @@
   }
   #banner-menu {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    align-items: center;
     justify-content: center;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     font-size: 1rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+  #banner-menu nav {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    justify-content: center;
   }
   #banner-menu a {
     color: var(--text-color);
     text-decoration: none;
+  }
+  #banner-menu a.active {
+    font-weight: 600;
+  }
+  #language-picker {
+    position: relative;
+  }
+  .language-dropdown {
+    position: relative;
+  }
+  .language-dropdown summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+  }
+  .language-dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+  .language-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: none;
+    stroke: var(--text-color);
+    stroke-width: 1.5;
+  }
+  .language-code {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color:  var(--text-color);
+  }
+  .language-dropdown ul {
+    position: absolute;
+    right: 0;
+    background: #fff8f0;
+    border: 1px solid rgba(139, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    min-width: 10rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+    background-clip: padding-box;
+  }
+  .language-dropdown li {
+    list-style: none;
+  }
+  .language-dropdown a {
+    color: var(--text-color);
+    display: block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+  .language-dropdown a:hover,
+  .language-dropdown a.active {
+    background-color: rgba(139, 0, 0, 0.1);
   }
   #banner-logo {
     background-image: url(/img/banner.jpeg);
@@ -59,6 +160,11 @@
   @media (width < 600px) {
     #banner-logo {
       height: 150px;
+    }
+    .language-dropdown ul {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
     }
   }  
 </style>
