@@ -2,7 +2,7 @@
 layout: layouts/post.webc
 title: 'Understanding MCP servers: generic vs. domain-specific approaches'
 date: '2025-05-16'
-permalink: '/understanding-mcp-servers/'
+permalink: '/en/understanding-mcp-servers/'
 tags: ['posts']
 locale: 'en'
 canonical_url: 'https://www.clever-cloud.com/blog/engineering/2025/05/16/understanding-mcp-servers-generic-vs-domain-specific-approaches/'

@@ -2,7 +2,7 @@
 layout: layouts/post.webc
 title: 'Under the hood'
 date: '2023-10-09'
-permalink: '/under-the-hood/'
+permalink: '/en/under-the-hood/'
 tags: ['posts']
 locale: 'en'
 ---

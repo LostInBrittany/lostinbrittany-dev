@@ -10,7 +10,7 @@ event_url: "hhttps://www.jugsummercamp.org/edition/16/presentations/cmbnc7aae04a
 date: "2025-09-23"
 location: "Nantes, France"
 language: "fr"
-slides_pdf: "/slides/2025-09-23_Zenika_Night_Clazz_-_Building_smarter_MCP_servers.pdf"
+slides_pdf: "/slides/2025/2025-09-23_Zenika_Night_Clazz_-_Building_smarter_MCP_servers.pdf"
 slides_url: "https://noti.st/lostinbrittany/a5kjeT/building-smarter-mcp-servers-generic-vs-domain-specific-approaches"
 video_url: ""
 talk_tags:

@@ -2,7 +2,7 @@
 layout: layouts/post.webc
 title: DevRel at Clever Cloud
 date: '2025-03-11'
-permalink: '/devrel-at-clever-cloud/'
+permalink: '/en/devrel-at-clever-cloud/'
 tags: ['posts']
 locale: 'en'
 canonical_url: 'https://www.clever-cloud.com/blog/company/2025/03/11/developer-relations-devrel-at-clever-cloud/'

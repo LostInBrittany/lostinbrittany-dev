@@ -2,7 +2,7 @@
 layout: layouts/post.webc
 title: 'Bajo el capó'
 date: '2023-10-09'
-permalink: '/bajo-el-capo/'
+permalink: '/es/bajo-el-capo/'
 tags: ['posts']
 locale: 'es'
 ---

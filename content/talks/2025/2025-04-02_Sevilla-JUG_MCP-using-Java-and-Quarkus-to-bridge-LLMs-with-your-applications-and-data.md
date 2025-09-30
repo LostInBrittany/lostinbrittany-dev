@@ -10,7 +10,7 @@ event_url: "https://noti.st/events/LsqNdn/sevilla-jug"
 date: "2025-04-02"
 location: "Seville, Spain"
 language: "en"
-slides_pdf: "/slides/2025-04-02_Sevilla-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
+slides_pdf: "/slides/2025/2025-04-02_Sevilla-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
 slides_url: "https://noti.st/lostinbrittany/3mvU02/mcp-using-java-and-quarkus-to-bridge-llms-with-your-applications-and-data"
 video_url: ""
 talk_tags:

@@ -2,7 +2,7 @@
 layout: layouts/post.webc
 title: 'Hello world!'
 date: '2023-10-05'
-permalink: '/hello-world/'
+permalink: '/en/hello-world/'
 tags: ['posts']
 locale: 'en'
 ---

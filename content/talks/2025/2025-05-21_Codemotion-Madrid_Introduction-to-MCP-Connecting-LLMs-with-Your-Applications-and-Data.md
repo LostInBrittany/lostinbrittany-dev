@@ -10,7 +10,7 @@ event_url: ''
 date: '2025-05-21'
 location: 'Madrid, Spain'
 language: 'en'
-slides_pdf: '/slides/2025-05-21_Codemotion-Madrid_Introduction-to-MCP-Connecting-LLMs-with-Your-Applications-and-Data.pdf'
+slides_pdf: '/slides/2025/2025-05-21_Codemotion-Madrid_Introduction-to-MCP-Connecting-LLMs-with-Your-Applications-and-Data.pdf'
 slides_url: 'https://noti.st/lostinbrittany/3Rrty8/introduction-to-mcp-connecting-llms-with-your-applications-and-data'
 video_url: ''
 talk_tags:

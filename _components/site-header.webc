@@ -1,4 +1,8 @@
 <header>
+    <div id="banner-logo"></div>
+    <div id="banner-title">
+      LostInBrittany's tech blog  
+    </div>
     <div id="banner-menu">
       <script webc:type="js" webc:root>
         `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
@@ -8,10 +12,6 @@
       <span>
         <a href="/">en</a>-<a href="/fr/">fr</a>-<a href="/es/">es</a>
       </span>
-    </div>
-    <div id="banner-logo"></div>
-    <div id="banner-title">
-      LostInBrittany's tech blog  
     </div>
 </header>
 
@@ -42,6 +42,7 @@
     background-repeat: no-repeat; 
     background-position: center;
     height: 250px;
+    margin-top: 1rem;
   }
   #banner-title {
     text-align: center;

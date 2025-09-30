@@ -10,7 +10,7 @@ event_url: "https://www.devbcn.com/"
 date: "2025-07-08"
 location: "Barcelona, Spain"
 language: "fr"
-slides_pdf: "/slides/2025-07-08_DevBcn_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
+slides_pdf: "/slides/2025/2025-07-08_DevBcn_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: "https://noti.st/lostinbrittany/EufYu2/htmx-web-components-a-perfect-match-for-frontend-development"
 video_url: ""
 talk_tags:

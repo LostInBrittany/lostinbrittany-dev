@@ -2,7 +2,7 @@
 layout: layouts/post.webc
 title: 'Sous le capot'
 date: '2023-10-09'
-permalink: '/sous-le-capot/'
+permalink: '/fr/sous-le-capot/'
 tags: ['posts']
 locale: 'fr'
 ---

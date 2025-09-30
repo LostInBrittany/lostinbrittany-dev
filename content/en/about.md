@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Horacio Gonzalez'
-permalink: '/about/'
+permalink: '/en/about/'
 tags: []
 locale: 'en'
 ---

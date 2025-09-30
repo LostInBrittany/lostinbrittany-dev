@@ -2,7 +2,7 @@
 layout: layouts/post.webc
 title: '¡Hola mundo!'
 date: '2023-10-05'
-permalink: '/hola-mundo/'
+permalink: '/es/hola-mundo/'
 tags: ['posts']
 locale: 'es'
 ---
