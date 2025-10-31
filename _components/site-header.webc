@@ -7,8 +7,9 @@
       <nav>
         <script webc:type="js" webc:root>
           `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
-          <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>
-          <a href="${$data.links[$data.locale].talks.url}">${$data.links[$data.locale].talks.name}</a>`
+          <a href="${$data.links[$data.locale].talks.url}">${$data.links[$data.locale].talks.name}</a>
+          <a href="${$data.links[$data.locale].geek_blog.url}" target="_blank">${$data.links[$data.locale].geek_blog.name}</a>
+          <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>`
         </script>
       </nav>
       <div id="language-picker">
@@ -51,12 +52,14 @@
 
 <style webc:scoped>
   header { 
-    background-color: #c59158;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.92), rgba(56, 189, 248, 0.75));
     display: flex;
     flex-flow: column nowrap;
     font-family: var(--header-font);
     font-weight: 400;
-    --text-color: darkred;
+    --text-color: #f8fafc;
+    color: var(--text-color);
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
   }
   #banner-menu {
     display: flex;
@@ -66,7 +69,7 @@
     column-gap: 1.5rem;
     font-size: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   #banner-menu nav {
     display: flex;
@@ -95,8 +98,8 @@
     align-items: center;
     column-gap: 0.5rem;
     cursor: pointer;
-    background: rgba(255, 248, 240, 0.85);
-    border: 1px solid rgba(139, 0, 0, 0.25);
+    background: rgba(244, 246, 251, 0.18);
+    border: 1px solid rgba(148, 163, 184, 0.35);
     border-radius: 999px;
     padding: 0.35rem 0.75rem;
     backdrop-filter: blur(2px);
@@ -108,9 +111,9 @@
   .language-dropdown summary:hover,
   .language-dropdown[open] summary,
   .language-dropdown summary:focus-visible {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(139, 0, 0, 0.35);
-    box-shadow: 0 0.15rem 0.35rem rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(37, 99, 235, 0.55);
+    box-shadow: 0 0.35rem 0.75rem rgba(15, 23, 42, 0.18);
     outline: none;
   }
   .language-icon svg {
@@ -132,13 +135,13 @@
   .language-dropdown ul {
     position: absolute;
     right: 0;
-    background: #fff8f0;
-    border: 1px solid rgba(139, 0, 0, 0.2);
+    background: rgba(244, 246, 251, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.4);
     border-radius: 0.5rem;
     padding: 0.5rem;
     margin-top: 0.5rem;
     min-width: 10rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.45rem 1.1rem rgba(15, 23, 42, 0.2);
     display: flex;
     flex-direction: column;
     row-gap: 0.25rem;
@@ -148,7 +151,7 @@
     list-style: none;
   }
   .language-dropdown a {
-    color: var(--text-color);
+    color: var(--color-text);
     display: block;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
@@ -156,10 +159,10 @@
   }
   .language-dropdown a:hover,
   .language-dropdown a.active {
-    background-color: rgba(139, 0, 0, 0.1);
+    background-color: rgba(56, 189, 248, 0.18);
   }
   #banner-logo {
-    background-image: url(/img/banner.jpeg);
+    background-image: url(/img/banner.png);
     background-size: contain;
     background-repeat: no-repeat; 
     background-position: center;

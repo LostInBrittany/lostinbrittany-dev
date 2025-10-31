@@ -26,41 +26,5 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"  webc:keep>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin  webc:keep>
 <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet"  webc:keep>
+<link rel="stylesheet" href="/css/main.css" webc:keep>
 <link webc:if="canonical_url" rel="canonical" :href="canonical_url">
-
-<style>
-  body {
-    background: #eee;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    --body-text-font: sans-serif;
-    --header-font: 'Antonio', sans-serif;
-    --header-color: darkred;
-    --link-color: darkred;
-  }
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: white;
-    display: flex;
-    flex-flow: column nowrap;
-    font-family: var(--body-text-font);
-  }
-  main a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-
-  main h1, main h2, main h3, main h4, main h5, main h6 {
-    color: var(--header-color);
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-
-</style>
-
-  

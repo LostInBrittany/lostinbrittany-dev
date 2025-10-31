@@ -1,0 +1,227 @@
+:root {
+  --color-bg: #F4F6FB;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #E8ECF5;
+  --color-text: #0F172A;
+  --color-text-muted: #475569;
+  --color-accent: #2563EB;
+  --color-accent-soft: #38BDF8;
+  --color-border: rgba(148, 163, 184, 0.4);
+  --color-code-bg: #E2E8F0;
+  --shadow-lg: 0 32px 60px rgba(37, 99, 235, 0.16);
+  --shadow-md: 0 24px 48px rgba(15, 23, 42, 0.08);
+  --shadow-sm: 0 12px 24px rgba(15, 23, 42, 0.06);
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-heading: "Antonio", "Segoe UI", system-ui, sans-serif;
+  --body-text-font: var(--font-body);
+  --header-font: var(--font-heading);
+  --link-color: var(--color-accent);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent-soft);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-accent-soft);
+  outline-offset: 2px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: var(--shadow-md);
+}
+
+main > * {
+  padding-left: clamp(1.5rem, 3vw, 3rem);
+  padding-right: clamp(1.5rem, 3vw, 3rem);
+}
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+main h1 {
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+}
+
+main h2 {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+}
+
+main h3 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+}
+
+main h4 {
+  font-size: clamp(1.3rem, 2.1vw, 1.6rem);
+}
+
+main h5 {
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+}
+
+main h6 {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+}
+
+p {
+  margin: 0 0 1.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+figure {
+  margin: 2rem 0;
+}
+
+figcaption {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+code,
+pre {
+  font-family: "Fira Code", "Source Code Pro", Menlo, Consolas, "Liberation Mono", monospace;
+  background: var(--color-code-bg);
+  border-radius: 8px;
+}
+
+code {
+  padding: 0.15rem 0.35rem;
+}
+
+pre {
+  padding: 1.25rem 1.5rem;
+  overflow: auto;
+  box-shadow: var(--shadow-sm);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--color-border);
+  margin: 3rem 0;
+}
+
+button,
+.btn,
+input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+button:focus-visible,
+.btn:focus-visible,
+input[type="submit"]:focus-visible {
+  outline: 3px solid var(--color-accent-soft);
+  outline-offset: 2px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+footer {
+  margin-top: auto;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(56, 189, 248, 0.05));
+  color: var(--color-text);
+}
+
+footer a {
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  main {
+    box-shadow: none;
+  }
+
+  main > * {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+}

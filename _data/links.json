@@ -11,6 +11,10 @@
     "talks": {
       "name": "Talks",
       "url": "/talks/"
+    },
+    "geek_blog": {
+      "name": "Blog Geek",
+      "url": "https://lostinbrittany.com/"
     }
   },
   "fr": {
@@ -25,6 +29,10 @@
     "talks": {
       "name": "Conférences",
       "url": "/talks/"
+    },
+    "geek_blog": {
+      "name": "Blog Geek",
+      "url": "https://lostinbrittany.com/fr/"
     }
   },
   "es": {
@@ -39,6 +47,10 @@
     "talks": {
       "name": "Charlas",
       "url": "/talks/"
+    },
+    "geek_blog": {
+      "name": "Blog Friki",
+      "url": "https://lostinbrittany.com/es/"
     }
   }
 }
