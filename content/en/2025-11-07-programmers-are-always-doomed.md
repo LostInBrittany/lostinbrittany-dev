@@ -231,7 +231,7 @@ From flipping switches to prompting LLMs, we’re still doing the same essential
 
 But every time the tools get smarter, something subtle happens.
 We start to wonder if we’re losing something, if the craft itself is slipping away.
-Are we being *deskilled*, or just *reskilled*?
+Are we being *deskilled*, or are we just being *reskilled*?
 
 That’s what we’ll explore next.
 
