@@ -6,7 +6,7 @@ function filterPostsByLocale(posts, locale) {
     return post.data.locale == locale;
   });
 
-  let latestPosts = localePosts.slice(-5).reverse();
+  let latestPosts = localePosts.slice(-15).reverse();
 
   return latestPosts;
 }
