@@ -15,6 +15,10 @@
     "geek_blog": {
       "name": "Geek Blog",
       "url": "https://lostinbrittany.com/"
+    },
+    "rss": {
+      "name": "RSS Feed",
+      "url": "/en/feed.xml"
     }
   },
   "fr": {
@@ -33,6 +37,10 @@
     "geek_blog": {
       "name": "Blog Geek",
       "url": "https://lostinbrittany.com/fr/"
+    },
+    "rss": {
+      "name": "Flux RSS",
+      "url": "/fr/feed.xml"
     }
   },
   "es": {
@@ -51,6 +59,10 @@
     "geek_blog": {
       "name": "Blog Friki",
       "url": "https://lostinbrittany.com/es/"
+    },
+    "rss": {
+      "name": "Fuente RSS",
+      "url": "/es/feed.xml"
     }
   }
 }

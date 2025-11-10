@@ -1,4 +1,5 @@
 const pluginWebc = require("@11ty/eleventy-plugin-webc");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { JSDOM } = require('jsdom');
 
 module.exports = function(eleventyConfig) {
@@ -7,6 +8,8 @@ module.exports = function(eleventyConfig) {
 		// (The default changed from `false` in Eleventy WebC v0.7.0)
 		components: "_components/**/*.webc",    
   });
+
+  eleventyConfig.addPlugin(pluginRss);
 
   
   // Have Eleventy watch the following additional files for live browsersync

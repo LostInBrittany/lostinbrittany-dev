@@ -9,7 +9,8 @@
           `<a href="${$data.links[$data.locale].home.url}">${$data.links[$data.locale].home.name}</a>
           <a href="${$data.links[$data.locale].talks.url}">${$data.links[$data.locale].talks.name}</a>
           <a href="${$data.links[$data.locale].geek_blog.url}" target="_blank">${$data.links[$data.locale].geek_blog.name}</a>
-          <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>`
+          <a href="${$data.links[$data.locale].about.url}">${$data.links[$data.locale].about.name}</a>
+          <a href="${$data.links[$data.locale].rss.url}">${$data.links[$data.locale].rss.name}</a>`
         </script>
       </nav>
       <div id="language-picker">
