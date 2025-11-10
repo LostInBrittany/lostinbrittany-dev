@@ -52,7 +52,7 @@ function notLast() {
     border: 2px solid #ccc;
   }
   @media (width<500px) {
-    .img-left, .img-right {
+    img.img-left, img.img-right {
       float: none;
       display: block;
       margin: 0 auto;

@@ -1,27 +1,24 @@
 <script webc:setup>
-  let title;
-  let canonical_url;
-  const author="Horacio Gonzalez";
-  const description="LostInBrittany's tech blog, reborn... again...";
+  function getSocialImage(thumbnail) {
+    return thumbnail ? `/img/${thumbnail}` : global.defaultSocialImage;
+  }
 </script>
-
-
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/img/favicon.png" type="image/png">
 
-<meta name="author" :content="author">
-<meta name="description" :content="description">
+<meta name="author" :content="global.author">
+<meta name="description" :content="global.description">
 
-<meta property="og:title" :content="title">
-<meta name="twitter:title" :content="title":content="title">
-<meta property="og:description" :content="description">
-<meta property="twitter:description" :content="description">
-<meta property="og:image" content="https://lostinbrittany.dev/img/lostinbrittany_avatat_2023_500px">
-<meta name="twitter:image" content="https://lostinbrittany.dev/img/lostinbrittany_avatat_2023_500px">
+<meta property="og:title" :content="global.title">
+<meta name="twitter:title" :content="global.title">
+<meta property="og:description" :content="global.description">
+<meta property="twitter:description" :content="global.description">
+<meta property="og:image" :content="getSocialImage(thumbnail)">
+<meta name="twitter:image" :content="getSocialImage(thumbnail)">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:url" content="/">
+<meta property="og:url" :content="url">
 
 <link rel="preconnect" href="https://fonts.googleapis.com"  webc:keep>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin  webc:keep>
