@@ -1,6 +1,6 @@
 <script webc:setup>
   function getSocialImage(thumbnail) {
-    return thumbnail ? `/img/${thumbnail}` : global.defaultSocialImage;
+    return thumbnail ? `https://lostinbrittany.dev/img/${thumbnail}` : global.defaultSocialImage;
   }
 </script>
 
