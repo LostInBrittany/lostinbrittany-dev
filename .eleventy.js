@@ -11,7 +11,14 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
 
-  
+  // Filter out draft posts from collections
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return collectionApi.getFilteredByTag("posts").filter(function(item) {
+      return !item.data.draft;
+    });
+  });
+
+
   // Have Eleventy watch the following additional files for live browsersync
   eleventyConfig.addWatchTarget('./**/*.css');
   eleventyConfig.addWatchTarget('./**/*.js');
