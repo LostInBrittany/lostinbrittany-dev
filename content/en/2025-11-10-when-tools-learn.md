@@ -68,18 +68,41 @@ LLMs don’t change that; they just change which steps we spend our time on.
 
 ---
 
-## What we’re really learning now
+## What we're really learning now
 
-Using AI to code is teaching us new literacies:
+Using AI to code isn't making us dumber. It's teaching us different literacies—ones that matter more as the tools get smarter.
 
-* **Framing**: describing intent clearly enough that a model can follow it.
-* **Reading critically**: recognizing when generated code is elegant but wrong.
-* **Debugging abstractions**: tracing errors through layers you didn’t personally write.
-* **Ethics and trust**: deciding when *not* to automate.
 
 ![What we’re really learning now](/img/posts/rewriting-the-role/what-are-we-learning.jpg)
 
-That last one might be the most human skill of all.
+### Framing: the art of describing intent
+
+When you write code yourself, you can be vague about requirements because you'll figure it out as you go. But when you're working with an LLM, precision matters upfront. You're learning to articulate *what you want* before you see *how it works*.
+
+This isn't dumbing down, it's specification design, the skill that separates good architects from code monkeys. You're learning to think before you build, which was always supposed to be the hard part.
+
+### Reading critically: when elegant code is wrong
+
+LLMs are excellent at producing code that *looks* right. Clean structure, sensible naming, proper patterns. But "looks right" and "is right" are different things.
+
+I've seen generated functions that handle the happy path beautifully but silently fail on edge cases. I've seen elegant algorithms that are O(n²) when they should be O(n). The code compiles. The tests pass. And it's still wrong.
+
+This teaches us to read code the way we should have been reading it all along: skeptically, with an eye for what's missing, not just what's there.
+
+### Debugging through abstractions you didn't write
+
+Here's where it gets interesting: when AI generates code, you often don't have the mental model of *how* it works, only *what* it does. And when it breaks, you can't rely on your memory of writing it.
+
+This is actually closer to how most professional development works—inheriting codebases, debugging libraries, tracing issues through layers you didn't create. LLMs are teaching junior developers a skill that used to take years to develop: reasoning about systems from the outside in.
+
+### Deciding when *not* to automate
+
+Perhaps the most human skill of all: judgment.
+
+Should you use AI to generate security-critical code? Data validation logic? The algorithm that decides who gets a loan? Just because you *can* automate something doesn't mean you *should*.
+
+This isn't a technical skill, it's an ethical one. And it's becoming the defining characteristic of seniority in our field.
+
 
 ---
 
