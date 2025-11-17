@@ -99,7 +99,7 @@
     align-items: center;
     column-gap: 0.5rem;
     cursor: pointer;
-    background: rgba(244, 246, 251, 0.18);
+    background: rgba(56, 111, 237, 0.6);
     border: 1px solid rgba(148, 163, 184, 0.35);
     border-radius: 999px;
     padding: 0.35rem 0.75rem;
@@ -112,7 +112,7 @@
   .language-dropdown summary:hover,
   .language-dropdown[open] summary,
   .language-dropdown summary:focus-visible {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(37, 99, 235, 0.85);
     border-color: rgba(37, 99, 235, 0.55);
     box-shadow: 0 0.35rem 0.75rem rgba(15, 23, 42, 0.18);
     outline: none;
@@ -136,7 +136,7 @@
   .language-dropdown ul {
     position: absolute;
     right: 0;
-    background: rgba(244, 246, 251, 0.95);
+    background: #386fed;
     border: 1px solid rgba(148, 163, 184, 0.4);
     border-radius: 0.5rem;
     padding: 0.5rem;
