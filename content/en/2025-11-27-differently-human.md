@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Differently Human'
-date: '2025-11-21'
+date: '2025-11-27'
 permalink: '/en/differently-human/'
 tags: ['posts']
 locale: 'en'
