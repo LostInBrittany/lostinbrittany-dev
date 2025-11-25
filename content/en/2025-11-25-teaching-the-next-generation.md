@@ -5,7 +5,7 @@ date: '2025-11-25'
 permalink: '/en/teaching-the-next-generation/'
 tags: ['posts']
 locale: 'en'
-canonical_url: ''
+thumbnail: 'posts/rewriting-the-role/teaching-next-generation.jpg'
 ---
 
 ### Becoming a Developer in the Age of LLMs
