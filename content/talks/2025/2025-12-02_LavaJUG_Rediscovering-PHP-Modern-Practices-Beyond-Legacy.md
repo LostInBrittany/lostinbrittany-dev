@@ -15,6 +15,5 @@ slides_url: ""
 video_url: ""
 talk_tags:
   - PHP
-  - Modern Development
 
 ---

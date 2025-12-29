@@ -17,7 +17,6 @@ talk_tags:
   - htmx
   - Web Components
   - Lit
-  - DevFest
 
 ---
 
