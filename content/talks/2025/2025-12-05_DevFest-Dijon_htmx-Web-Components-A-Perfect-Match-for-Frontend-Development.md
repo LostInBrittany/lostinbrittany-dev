@@ -6,7 +6,7 @@ locale: "en"
 
 title: "htmx & Web Components: A Perfect Match for Frontend Development"
 event: "DevFest Dijon"
-event_url: ""
+event_url: "https://devfest.developers-group-dijon.fr/"
 date: "2025-12-05"
 location: "Dijon, France"
 language: "fr"
@@ -20,7 +20,7 @@ talk_tags:
 
 ---
 
-his workshop dives into htmx 2.0, offering hands-on experience to streamline frontend development. You’ll explore its latest features through live coding and interactive exercises, starting with a quick introduction to its core functionality and new updates. Practical examples and real code snippets will show how htmx simplifies common frontend tasks.
+This workshop dives into htmx 2.0, offering hands-on experience to streamline frontend development. You’ll explore its latest features through live coding and interactive exercises, starting with a quick introduction to its core functionality and new updates. Practical examples and real code snippets will show how htmx simplifies common frontend tasks.
 
 Next, you’ll learn to create reusable Web Components using the Lit library, with a guided exercise to build a simple Lit element and integrate it into a project.
 

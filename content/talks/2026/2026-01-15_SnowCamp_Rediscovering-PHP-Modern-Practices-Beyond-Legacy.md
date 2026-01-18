@@ -5,20 +5,20 @@ tags:
 locale: "en"
 
 title: "Rediscovering PHP: Modern Practices Beyond Legacy"
-event: "LavaJUG"
-event_url: ""
-date: "2025-12-02"
-location: "Clermont-Ferrand, France"
+event: "SnowCamp"
+event_url: "https://snowcamp.io/"
+date: "2026-01-15"
+location: "Grenoble, France"
 language: "fr"
-slides_pdf: "/slides/2025/2025-12-02_LavaJUG_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
-slides_url: ""
+slides_pdf: "/slides/2026/2026-01-15_SnowCamp_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
+slides_url: "https://noti.st/lostinbrittany/DbFy2O/rediscovering-php-modern-practices-beyond-legacy"
 video_url: ""
 talk_tags:
   - PHP
 
 ---
 
-PPHP powers over half of the web, yet many developers still remember it as spaghetti-code of the ’90s. In this session, you’ll see how PHP has evolved into a modern platform featuring JIT compilation, strong typing, attributes, and a thriving ecosystem of packages & frameworks. We’ll dispel common myths – no, PHP does know objects – and explore how today’s best practices bring PHP in line with, and often ahead of, other mainstream languages.
+PHP powers over half of the web, yet many developers still remember it as spaghetti-code of the ’90s. In this session, you’ll see how PHP has evolved into a modern platform featuring JIT compilation, strong typing, attributes, and a thriving ecosystem of packages & frameworks. We’ll dispel common myths – no, PHP does know objects – and explore how today’s best practices bring PHP in line with, and often ahead of, other mainstream languages.
 
 With concise examples and case studies, you’ll learn how modern PHP leverages tools like Composer, PSR standards, static analysis, and Dependency Injection to build maintainable, scalable applications. Whether you’re coming from Java, JavaScript, Go or Rust, you’ll discover how PHP’s strengths – its simplicity, performance gains in PHP 8+, and vibrant community – can complement your existing toolset.
 
