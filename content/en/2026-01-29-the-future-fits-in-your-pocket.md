@@ -92,3 +92,4 @@ The future might be smaller than we think. And it might already fit in your pock
 
 Just like it did in 2008.
 
+P.S.: Many thanks [Mathieu Ancelin](https://bsky.app/profile/mathieuancelin.bsky.social) for making me discover this model family!
