@@ -211,6 +211,7 @@ footer a {
   color: var(--color-text);
 }
 
+
 @media (max-width: 768px) {
   main {
     box-shadow: none;
