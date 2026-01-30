@@ -6,7 +6,7 @@ permalink: '/en/differently-human/'
 tags: ['posts']
 locale: 'en'
 canonical_url: ''
-thumbnail: 'posts/rewriting-the-role/differently-human.jpg'
+social: 'posts/rewriting-the-role/differently-human.jpg'
 ---
 
 ### The Future of Software Development

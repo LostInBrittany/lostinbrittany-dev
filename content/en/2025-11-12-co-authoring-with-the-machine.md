@@ -5,7 +5,7 @@ date: '2025-11-12'
 permalink: '/en/co-authoring-with-the-machine/'
 tags: ['posts']
 locale: 'en'
-thumbnail: 'posts/rewriting-the-role/developers-new-workflow.jpg'
+social: 'posts/rewriting-the-role/developers-new-workflow.jpg'
 ---
 
 ### The Developer’s New Workflow in the Age of AI

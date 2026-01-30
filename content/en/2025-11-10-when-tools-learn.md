@@ -6,7 +6,7 @@ permalink: '/en/when-tools-learn/'
 tags: ['posts']
 locale: 'en'
 canonical_url: ''
-thumbnail: 'posts/rewriting-the-role/when-tools-learn.jpg'
+social: 'posts/rewriting-the-role/when-tools-learn.jpg'
 ---
 
 ### Deskilling or Reskilling in the Age of AI

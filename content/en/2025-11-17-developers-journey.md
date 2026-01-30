@@ -5,7 +5,7 @@ date: '2025-11-17'
 permalink: '/en/developers-journey/'
 tags: ['posts']
 locale: 'en'
-thumbnail: 'posts/rewriting-the-role/developers-journey.jpg'
+social: 'posts/rewriting-the-role/developers-journey.jpg'
 ---
 
 ### Growing Up with Smarter Tools

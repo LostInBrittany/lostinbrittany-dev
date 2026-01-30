@@ -5,7 +5,7 @@ date: '2026-01-29'
 permalink: '/en/the-future-fits-in-your-pocket/'
 tags: ['posts']
 locale: 'en'
-thumbnail: 'posts/2026-01-29-the-future-fits-in-your-pocket-social.png'
+social: 'posts/2026-01-29-the-future-fits-in-your-pocket-social.png'
 ---
 
 <img class="img-right img-250px" src="/img/posts/2026-01-29-the-future-fits-in-your-pocket-00.png" :alt="title"></img>

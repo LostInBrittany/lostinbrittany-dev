@@ -6,7 +6,7 @@ permalink: '/en/programmers-are-always-doomed/'
 tags: ['posts']
 locale: 'en'
 canonical_url: ''
-thumbnail: 'posts/rewriting-the-role/programmers-are-always-doomed.jpg'
+social: 'posts/rewriting-the-role/programmers-are-always-doomed.jpg'
 ---
 
 ### Until They’re Not
