@@ -27,7 +27,7 @@ function formatTalkDate(dateString) {
 <html lang="en">
 <head>
   <title @html="title"></title>
-  <meta webc:is="head-commons" webc:nokeep :title="title">
+  <meta webc:is="head-commons" webc:nokeep :@title="page.title" :@global="global" :@url="page.url" >
   <style @raw="getBundle('css')" webc:keep></style>
   <script @raw="getBundle('js')" webc:keep></script>
 </head>

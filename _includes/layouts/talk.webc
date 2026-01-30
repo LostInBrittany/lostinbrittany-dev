@@ -1,12 +1,25 @@
 <script webc:setup>
+  function getSlug(url) {
+    return url.split('/').at(-2);
+  }
+  function getYear(date) {
+    return new Date(date).getFullYear();
+  }
+  function getSocialImage(date, url) {
+    return 'talks/' + getYear(date) + '/' + getSlug(url) + '.jpg';
+  }
+  function getThumbnail(date, url) {
+    return '/img/talks/' + getYear(date) + '/' + getSlug(url) + '.jpg';
+  }
 </script>
+
 
 <!doctype html>
 <html lang="en">
 <head>
   <title @html="title"></title>
 
-  <meta webc:is="head-commons" webc:nokeep :title="title">
+  <meta webc:is="head-commons" webc:nokeep :@title="page.title" :@global="global" :@url="page.url" :@social="getSocialImage(date, page.url)" :@canonical_url="canonical_url">
 
   <!-- Default bucket -->
   <style @raw="getBundle('css')" webc:keep></style>
@@ -30,6 +43,7 @@
       :@displayed_content="content"
       :@url="page.url"
       :@filePathStem="page.filePathStem"
+      :@thumbnail="getThumbnail(date, page.url)"
     ></talk-detail>
     <site-footer></site-footer>
   </main>

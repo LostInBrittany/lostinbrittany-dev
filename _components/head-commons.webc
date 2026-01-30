@@ -1,6 +1,6 @@
 <script webc:setup>
-  function getSocialImage(thumbnail) {
-    return thumbnail ? `${global.baseUrl}/img/${thumbnail}` : global.defaultSocialImage;
+  function getSocialImage(social) {
+    return social ? `${global.baseUrl}/img/${social}` : global.defaultSocialImage;
   }
   function getUrl(url) {
     return `${global.baseUrl}${url || ""}`;
@@ -19,8 +19,8 @@
 <meta name="twitter:title" :content="global.title">
 <meta property="og:description" :content="global.description">
 <meta property="twitter:description" :content="global.description">
-<meta property="og:image" :content="getSocialImage(thumbnail)">
-<meta name="twitter:image" :content="getSocialImage(thumbnail)">
+<meta property="og:image" :content="getSocialImage(social)">
+<meta name="twitter:image" :content="getSocialImage(social)">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" :content="getUrl(url)">
 
