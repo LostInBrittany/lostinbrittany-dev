@@ -1,4 +1,10 @@
 <script webc:setup>
+  function getTitle(title) {
+    return title || global.title;
+  }
+  function getDescription(description) {
+    return description || global.description;
+  }
   function getSocialImage(social) {
     return social ? `${global.baseUrl}/img/${social}` : global.defaultSocialImage;
   }
@@ -8,17 +14,19 @@
   const url = getUrl();
 </script>
 
+<title @html="getTitle(title)"></title>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/img/favicon.png" type="image/png">
 
 <meta name="author" :content="global.author">
-<meta name="description" :content="global.description">
+<meta name="description" :content="getDescription(description)">
 
-<meta property="og:title" :content="global.title">
-<meta name="twitter:title" :content="global.title">
-<meta property="og:description" :content="global.description">
-<meta property="twitter:description" :content="global.description">
+<meta property="og:title" :content="getTitle(title)">
+<meta name="twitter:title" :content="getTitle(title)">
+<meta property="og:description" :content="getDescription(description)">
+<meta property="twitter:description" :content="getDescription(description)">
 <meta property="og:image" :content="getSocialImage(social)">
 <meta name="twitter:image" :content="getSocialImage(social)">
 <meta name="twitter:card" content="summary_large_image">

@@ -1,4 +1,10 @@
 <script webc:setup>
+  function getFullTitle(date,event,title) {
+    return `${new Date(date).toISOString().split('T')[0]} - ${event} - ${title}`;
+  }
+  function getDescription(date,event, title, location) {
+    return `"${title}", a talk by Horacio Gonzalez (LostInBrittany) at ${event} (${location}) on ${new Date(date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}.`;
+  }
   function getSlug(url) {
     return url.split('/').at(-2);
   }
@@ -17,9 +23,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title @html="title"></title>
-
-  <meta webc:is="head-commons" webc:nokeep :@title="page.title" :@global="global" :@url="page.url" :@social="getSocialImage(date, page.url)" :@canonical_url="canonical_url">
+  <meta webc:is="head-commons" webc:nokeep :@title="getFullTitle(date, event, title)" :@global="global" :@url="page.url" :@social="getSocialImage(date, page.url)" :@canonical_url="canonical_url" :@description="getDescription(date, event, title, location)">
 
   <!-- Default bucket -->
   <style @raw="getBundle('css')" webc:keep></style>
