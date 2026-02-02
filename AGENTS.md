@@ -24,6 +24,11 @@
 4. **Add content**:
    - Blog post: add Markdown file under `content/<locale>/` with front matter (`layout`, `title`, `date`, `permalink`, `tags`, `locale`).
    - Talk: add Markdown in `content/talks/<year>/` with front matter consumed by `talk-detail` component (event, links, etc.).
+5. **Add a talk** (complete workflow):
+   - Rename the slides PDF to follow naming convention: `slides/<year>/<YYYY-MM-DD>_<Event>_<Title-With-Dashes>.pdf`
+   - Create Markdown file in `content/talks/<year>/` with same base name (`.md`)
+   - Extract cover image from first page of PDF and save to `img/talks/<year>/<slug>.jpg` where `<slug>` matches the Markdown filename without extension
+   - Command to extract cover image: `magick -density 150 "path/to/slides.pdf[0]" -quality 90 "img/talks/<year>/<slug>.jpg"`
 
 ## Conventions & Notes
 - Use ISO date strings in front matter so Eleventy collections sort correctly.
