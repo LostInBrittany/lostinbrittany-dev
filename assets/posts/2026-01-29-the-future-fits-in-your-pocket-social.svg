@@ -68,11 +68,11 @@
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,-58.1464,45.326126)"
        id="text1"
-       style="font-size:20px;line-height:25px;font-family:'Plus Jakarta Sans';-inkscape-font-specification:'Plus Jakarta Sans';text-align:center;white-space:pre;shape-inside:url(#rect1);fill:none;stroke:#000000;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.77953, 7.55906" /><text
+       style="font-size:20px;line-height:25px;font-family:'Plus Jakarta Sans';-inkscape-font-specification:'Plus Jakarta Sans';text-align:center;white-space:pre;shape-inside:url(#rect1);display:inline;fill:none;stroke:#000000;stroke-width:3.77953;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.77953, 7.55906" /><text
        xml:space="preserve"
        transform="matrix(0.87777723,0,0,0.95396693,-748.20252,-9.9248453)"
        id="text2"
-       style="font-size:20px;line-height:25px;font-family:'Plus Jakarta Sans';-inkscape-font-specification:'Plus Jakarta Sans';text-align:center;white-space:pre;shape-inside:url(#rect2);fill:#ffffff;stroke:none;stroke-width:1.0928;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.0928, 2.1856"><tspan
+       style="font-size:20px;line-height:25px;font-family:'Plus Jakarta Sans';-inkscape-font-specification:'Plus Jakarta Sans';text-align:center;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#ffffff;stroke:none;stroke-width:1.0928;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.0928, 2.1856"><tspan
          x="856.98828"
          y="177.31195"
          id="tspan2"><tspan
@@ -94,7 +94,7 @@
        xml:space="preserve"
        transform="matrix(0.43459062,0,0,0.47231241,-317.95834,121.47236)"
        id="text4"
-       style="font-size:20px;line-height:25px;font-family:'Plus Jakarta Sans';-inkscape-font-specification:'Plus Jakarta Sans';text-align:center;white-space:pre;shape-inside:url(#rect4);fill:none;stroke:#000000;stroke-width:2.20723;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.20723, 4.41444"><tspan
+       style="font-size:20px;line-height:25px;font-family:'Plus Jakarta Sans';-inkscape-font-specification:'Plus Jakarta Sans';text-align:center;white-space:pre;shape-inside:url(#rect4);display:inline;fill:none;stroke:#000000;stroke-width:2.20723;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.20723, 4.41444"><tspan
          x="905.71875"
          y="177.31195"
          id="tspan6"><tspan
