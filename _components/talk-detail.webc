@@ -11,7 +11,7 @@
     </div>
     <div class="links">
       <a :href="slides_pdf" class="btn" target="_blank">Download Slides (PDF)</a>
-      <a webc:if="slides_url" :href="slides_url" class="btn" target="_blank">View on Notist</a>
+      <a webc:if="slides_url" :href="slides_url" class="btn" target="_blank">View Slides on Notist</a>
       <a webc:if="video_url" :href="video_url" class="btn" target="_blank">Watch Video</a>
     </div>
     <div class="tags" webc:if="talk_tags?.length">

@@ -4,15 +4,15 @@ tags:
   - talks
 locale: "en"
 
-title: "Rewriting the role"
+title: "Rewriting the role: Developers in the age of LLM"
 event: "BDX I/O"
 event_url: ""
 date: "2025-11-07"
 location: "Bordeaux, France"
 language: "en"
 slides_pdf: "/slides/2025/2025-11-07_BDX-IO_Rewriting-the-role.pdf"
-slides_url: ""
-video_url: ""
+slides_url: "https://noti.st/lostinbrittany/rocLQ8/rewriting-the-role-developers-in-the-age-of-llms"
+video_url: "https://www.youtube.com/watch?v=VIdFZ6GhJZw"
 talk_tags:
   - AI
   - Development
