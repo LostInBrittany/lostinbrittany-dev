@@ -11,7 +11,7 @@ date: "2026-02-12"
 location: "Tours, France"
 language: "fr"
 slides_pdf: "/slides/2026/2026-02-12_Touraine-Tech_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
-slides_url: ""
+slides_url: "https://noti.st/lostinbrittany/npP2lW/rediscovering-php-modern-practices-beyond-legacy"
 video_url: ""
 talk_tags:
   - PHP
