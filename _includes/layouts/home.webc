@@ -6,7 +6,7 @@ function filterPostsByLocale(posts, locale) {
     return post.data.locale == locale;
   });
 
-  let latestPosts = localePosts.slice(-15).reverse();
+  let latestPosts = localePosts.reverse();
 
   return latestPosts;
 }
@@ -22,15 +22,102 @@ function filterPostsByLocale(posts, locale) {
   <script @raw="getBundle('js')" webc:keep></script>
 </head>
 <body>
-  
+
   <main>
     <site-header></site-header>
-    <post-details  webc:for="(index,item) in filterPostsByLocale(collections.posts, locale)"
-      :@title="item.data.title" :@date="item.data.date"
-      :@url="item.data.page.url"
-      :@displayed_content="excerpt(item.templateContent, item.data.page.url)" 
-      :@index="filterPostsByLocale(collections.posts, locale).length-1-index"></post-details>
+    <div id="posts-container">
+      <post-details  webc:for="(index,item) in filterPostsByLocale(collections.posts, locale)"
+        :@title="item.data.title" :@date="item.data.date"
+        :@url="item.data.page.url"
+        :@displayed_content="excerpt(item.templateContent, item.data.page.url)"
+        :@index="filterPostsByLocale(collections.posts, locale).length-1-index"></post-details>
+    </div>
+    <nav id="pagination" aria-label="Pagination"></nav>
     <site-footer></site-footer>
   </main>
+
+  <style webc:keep>
+    #pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1.5rem 0;
+      max-width: 80ch;
+      margin: 0 auto;
+    }
+    #pagination button {
+      padding: 0.4rem 0.8rem;
+      border: 1px solid #ccc;
+      background: #fff;
+      color: #444;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    #pagination button:hover {
+      background: #f0f0f0;
+    }
+    #pagination button.active {
+      background: #444;
+      color: #fff;
+      border-color: #444;
+    }
+    #pagination button:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  </style>
+
+  <script webc:keep>
+    document.addEventListener('DOMContentLoaded', () => {
+      const POSTS_PER_PAGE = 10;
+      const container = document.getElementById('posts-container');
+      const nav = document.getElementById('pagination');
+      const posts = Array.from(container.children);
+      const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+
+      if (totalPages <= 1) return;
+
+      let currentPage = 1;
+
+      function showPage(page) {
+        currentPage = page;
+        const start = (page - 1) * POSTS_PER_PAGE;
+        const end = start + POSTS_PER_PAGE;
+        posts.forEach((post, i) => {
+          post.style.display = (i >= start && i < end) ? '' : 'none';
+        });
+        renderNav();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function renderNav() {
+        nav.innerHTML = '';
+
+        const prev = document.createElement('button');
+        prev.textContent = '\u2190';
+        prev.disabled = currentPage === 1;
+        prev.addEventListener('click', () => showPage(currentPage - 1));
+        nav.appendChild(prev);
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement('button');
+          btn.textContent = i;
+          if (i === currentPage) btn.classList.add('active');
+          btn.addEventListener('click', () => showPage(i));
+          nav.appendChild(btn);
+        }
+
+        const next = document.createElement('button');
+        next.textContent = '\u2192';
+        next.disabled = currentPage === totalPages;
+        next.addEventListener('click', () => showPage(currentPage + 1));
+        nav.appendChild(next);
+      }
+
+      showPage(1);
+    });
+  </script>
 </body>
 </html>
