@@ -29,6 +29,13 @@
    - Create Markdown file in `content/talks/<year>/` with same base name (`.md`)
    - Extract cover image from first page of PDF and save to `img/talks/<year>/<slug>.jpg` where `<slug>` matches the Markdown filename without extension
    - Command to extract cover image: `magick -density 150 "path/to/slides.pdf[0]" -quality 90 "img/talks/<year>/<slug>.jpg"`
+   - Talk front matter fields (see existing talks for examples):
+     - `layout: layouts/talk.webc`, `tags: [talks]`, `locale` (site locale, usually `"en"`)
+     - `title`, `event`, `event_url`, `date` (ISO `YYYY-MM-DD`), `location` (City, Country)
+     - `language` (talk language, e.g. `"en"`, `"fr"`)
+     - `slides_pdf` (`/slides/<year>/<file>.pdf`), `slides_url` (noti.st link), `video_url` (empty `""` if none)
+     - `talk_tags` (list, e.g. `MCP`, `AI`, `Best Practices`)
+     - Body after front matter: the talk abstract/description (plain prose, one or more paragraphs)
 
 ## Conventions & Notes
 - Use ISO date strings in front matter so Eleventy collections sort correctly.
