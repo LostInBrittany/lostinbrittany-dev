@@ -9,6 +9,8 @@ event: 'DevQuest'
 event_url: 'https://www.devquest.fr/'
 date: '2025-06-05'
 location: '79000 Niort, France'
+lat: 46.3239
+lng: -0.4588
 language: 'fr'
 slides_pdf: '/slides/2025/2025-06-05_DevQuest_htmx-Web-Components-un-combo-parfait-pour-le-developpement-web.pdf'
 slides_url: 'https://noti.st/lostinbrittany/tFPNjj/htmx-web-components-un-combo-parfait-pour-le-developpement-web'

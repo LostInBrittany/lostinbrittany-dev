@@ -9,6 +9,8 @@ event: "Madrid JUG"
 event_url: "https://noti.st/events/jZ7ZlO/madrid-jug"
 date: "2025-03-05"
 location: "Madrid, Spain"
+lat: 40.4168
+lng: -3.7038
 language: "en"
 slides_pdf: "/slides/2025/2025-03_05_Madrid-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
 slides_url: "https://noti.st/lostinbrittany/RTCg7d/mcp-using-java-and-quarkus-to-bridge-llms-with-your-applications-and-data"

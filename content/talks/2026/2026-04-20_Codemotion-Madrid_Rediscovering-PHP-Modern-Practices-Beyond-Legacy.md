@@ -9,6 +9,8 @@ event: "Codemotion Madrid"
 event_url: "https://conferences.codemotion.com/madrid-2026/"
 date: "2026-04-20"
 location: "Madrid, Spain"
+lat: 40.4168
+lng: -3.7038
 language: "en"
 slides_pdf: "/slides/2026/2026-04-20_Codemotion-Madrid_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/o5EfzN/rediscovering-php-modern-practices-beyond-legacy"

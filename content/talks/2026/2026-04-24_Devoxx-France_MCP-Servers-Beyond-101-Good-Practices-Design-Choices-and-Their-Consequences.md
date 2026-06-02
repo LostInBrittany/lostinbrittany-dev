@@ -9,6 +9,8 @@ event: "Devoxx France"
 event_url: "https://m.devoxx.com/events/devoxxfr2026/talks/22577/serveurs-mcp-bonnes-pratiques-choix-de-conception-et-leurs-consquences"
 date: "2026-04-24"
 location: "Paris, France"
+lat: 48.8566
+lng: 2.3522
 language: "fr"
 slides_pdf: "/slides/2026/2026-04-24_Devoxx-France_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/2igHkB/serveurs-mcp-bonnes-pratiques-choix-de-conception-et-leurs-consequences"

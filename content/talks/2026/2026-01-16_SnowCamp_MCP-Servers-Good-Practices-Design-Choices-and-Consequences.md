@@ -9,6 +9,8 @@ event: "SnowCamp"
 event_url: "https://snowcamp.io/"
 date: "2026-01-16"
 location: "Grenoble, France"
+lat: 45.1885
+lng: 5.7245
 language: "fr"
 slides_pdf: "/slides/2026/2026-01-16_SnowCamp_-_MCP Servers_Good-Practices-Design-Choices-and-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/puylun/mcp-servers-good-practices-design-choices-and-consequences"

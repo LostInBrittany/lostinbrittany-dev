@@ -5,10 +5,12 @@ tags:
 locale: "en"
 
 title: "htmx & Web Components: A Perfect Match for Frontend Development"
-event: "DevBcn 2025"
+event: "DevBcn"
 event_url: "https://www.devbcn.com/"
 date: "2025-07-08"
 location: "Barcelona, Spain"
+lat: 41.3874
+lng: 2.1686
 language: "fr"
 slides_pdf: "/slides/2025/2025-07-08_DevBcn_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: "https://noti.st/lostinbrittany/EufYu2/htmx-web-components-a-perfect-match-for-frontend-development"

@@ -9,6 +9,8 @@ event: "Sunny Tech 2025"
 event_url: "https://sunny-tech.io/sessions/cm6qlzha200q4ms3mb9lqt7uv/"
 date: "2025-06-26"
 location: "Montpellier, France"
+lat: 43.6108
+lng: 3.8767
 language: "fr"
 slides_pdf: "/slides/2025/2025-06-26_Sunny-Tech_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: "https://noti.st/lostinbrittany/VZ8Bc8/htmx-web-components-un-combo-parfait-pour-le-developpement-web"

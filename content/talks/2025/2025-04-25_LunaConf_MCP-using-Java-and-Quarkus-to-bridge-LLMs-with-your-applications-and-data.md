@@ -9,6 +9,8 @@ event: 'LunaConf'
 event_url: ''
 date: '2025-04-25'
 location: 'Rotterdam, Netherlands'
+lat: 51.9244
+lng: 4.4777
 language: 'en'
 slides_pdf: '/slides/2025/2025-04-25_LunaConf_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf'
 slides_url: 'https://noti.st/lostinbrittany/iPEuzb/mcp-using-java-and-quarkus-to-bridge-llms-with-your-applications-and-data'

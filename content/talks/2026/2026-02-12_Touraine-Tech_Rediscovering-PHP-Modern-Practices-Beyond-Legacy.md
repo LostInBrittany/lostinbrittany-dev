@@ -9,6 +9,8 @@ event: "Touraine Tech"
 event_url: "https://touraine.tech/talk/cmg72szhs00a51elbjk4mrfru?day=1"
 date: "2026-02-12"
 location: "Tours, France"
+lat: 47.3941
+lng: 0.6848
 language: "fr"
 slides_pdf: "/slides/2026/2026-02-12_Touraine-Tech_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/npP2lW/rediscovering-php-modern-practices-beyond-legacy"

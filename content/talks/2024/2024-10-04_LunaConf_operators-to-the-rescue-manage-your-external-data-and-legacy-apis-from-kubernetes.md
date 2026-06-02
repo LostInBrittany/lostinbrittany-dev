@@ -9,6 +9,8 @@ event: "LunaConf"
 event_url: ""
 date: "2024-10-04"
 location: "Rotterdam, Netherlands"
+lat: 51.9244
+lng: 4.4777
 language: "en"
 slides_pdf: "https://on.notist.cloud/pdf/deck-c51f70c28c943e90.pdf"
 slides_url: "https://noti.st/lostinbrittany/LrVuPf/operators-to-the-rescue-manage-your-external-data-and-legacy-apis-from-kubernetes"

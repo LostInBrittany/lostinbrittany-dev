@@ -8,6 +8,8 @@ event: "BCN JUG"
 event_url: 
 date: 2024-05-23
 location: "Barcelona, Spain"
+lat: 41.3874
+lng: 2.1686
 language: "en"
 slides_pdf: "https://on.notist.cloud/pdf/deck-fefeb6dd5a672162.pdf"
 slides_url: "https://noti.st/lostinbrittany/hVhLG1/from-silos-to-devops-to-platform-engineering-embracing-gitops-and-going-behind-the-hype"

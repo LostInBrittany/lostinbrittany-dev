@@ -9,6 +9,8 @@ event: "DevoxxFR"
 event_url: "https://www.devoxx.fr/agenda-2025/talk/htmx-web-components-un-combo-parfait-pour-le-developpement-web/"
 date: "2025-04-16"
 location: "Paris, France"
+lat: 48.8566
+lng: 2.3522
 language: "fr"
 slides_pdf: "/slides/2025/2025-04-16_DevoxxFR_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: "https://noti.st/lostinbrittany/65W77C/htmx-web-components-un-combo-parfait-pour-le-developpement-web"

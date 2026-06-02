@@ -4,10 +4,12 @@ tags: talks
 locale: en
 
 title: "From Silos to DevOps to Platform Engineering: embracing GitOps and going behind the hype"
-event: "DevBCN"
+event: "DevBcn"
 event_url: 
 date: 2024-06-13
 location: "Barcelona, Spain"
+lat: 41.3874
+lng: 2.1686
 language: "en"
 slides_pdf: "https://on.notist.cloud/pdf/deck-076f9e645af24faf.pdf"
 slides_url: "https://noti.st/lostinbrittany/JpQ98Q/from-silos-to-devops-to-platform-engineering-embracing-gitops-and-going-behind-the-hype"

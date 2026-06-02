@@ -9,6 +9,8 @@ event: "BDX I/O"
 event_url: ""
 date: "2025-11-07"
 location: "Bordeaux, France"
+lat: 44.8378
+lng: -0.5792
 language: "en"
 slides_pdf: "/slides/2025/2025-11-07_BDX-IO_Rewriting-the-role.pdf"
 slides_url: "https://noti.st/lostinbrittany/rocLQ8/rewriting-the-role-developers-in-the-age-of-llms"

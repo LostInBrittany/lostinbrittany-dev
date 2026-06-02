@@ -9,6 +9,8 @@ event: "Cloud Toulouse"
 event_url: "https://cloudtoulouse.com/programme/"
 date: "2026-05-28"
 location: "Toulouse, France"
+lat: 43.6047
+lng: 1.4442
 language: "fr"
 slides_pdf: "/slides/2026/2026-05-28_Cloud-Toulouse_MCP-Servers-Beyond-101.pdf"
 slides_url: "https://noti.st/lostinbrittany/5b5Nn9/mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"

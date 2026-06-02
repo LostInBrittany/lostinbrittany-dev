@@ -9,6 +9,8 @@ event: "LavaJUG"
 event_url: ""
 date: "2025-12-02"
 location: "Clermont-Ferrand, France"
+lat: 45.7772
+lng: 3.087
 language: "fr"
 slides_pdf: "/slides/2025/2025-12-02_LavaJUG_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: ""

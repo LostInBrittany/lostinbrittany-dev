@@ -9,6 +9,8 @@ event: "Zenika Night Clazz Nantes"
 event_url: "hhttps://www.jugsummercamp.org/edition/16/presentations/cmbnc7aae04adp93m6814qhj4"
 date: "2025-09-23"
 location: "Nantes, France"
+lat: 47.2184
+lng: -1.5536
 language: "fr"
 slides_pdf: "/slides/2025/2025-09-23_Zenika_Night_Clazz_-_Building_smarter_MCP_servers.pdf"
 slides_url: "https://noti.st/lostinbrittany/a5kjeT/building-smarter-mcp-servers-generic-vs-domain-specific-approaches"

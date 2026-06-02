@@ -9,6 +9,8 @@ event: "JUG Summer Camp"
 event_url: "hhttps://www.jugsummercamp.org/edition/16/presentations/cmbnc7aae04adp93m6814qhj4"
 date: "2025-09-05"
 location: "La Rochelle, France"
+lat: 46.1603
+lng: -1.1511
 language: "fr"
 slides_pdf: "/slides/2025/2025-09-05_JUG_Summer_Camp_-_Building_smarter_MCP_servers.pdf"
 slides_url: "https://noti.st/lostinbrittany/Zf3h6d/building-smarter-mcp-servers-generic-vs-domain-specific-approaches"

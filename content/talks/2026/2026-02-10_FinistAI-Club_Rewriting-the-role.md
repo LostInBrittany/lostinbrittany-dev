@@ -9,6 +9,8 @@ event: "Finist'AI Club"
 event_url: "https://www.meetup.com/finistai-club/events/313077450/"
 date: "2026-02-10"
 location: "Brest, France"
+lat: 48.3904
+lng: -4.4861
 language: "fr"
 slides_pdf: "/slides/2026/2026-02-10_FinistAI-Club_Rewriting-the-role.pdf"
 slides_url: "https://noti.st/lostinbrittany/k3rsgr/rewriting-the-role-developers-in-the-age-of-llms"

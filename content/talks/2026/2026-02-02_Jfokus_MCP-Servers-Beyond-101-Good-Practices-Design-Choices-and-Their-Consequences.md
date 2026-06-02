@@ -9,6 +9,8 @@ event: "Jfokus"
 event_url: "https://www.jfokus.se/"
 date: "2026-02-02"
 location: "Stockholm, Sweden"
+lat: 59.3293
+lng: 18.0686
 language: "en"
 slides_pdf: "/slides/2026/2026-02-02_Jfokus_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/EqWMPw/mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"

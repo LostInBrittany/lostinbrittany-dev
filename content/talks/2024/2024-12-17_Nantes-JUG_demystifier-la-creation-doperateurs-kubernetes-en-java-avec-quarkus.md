@@ -9,6 +9,8 @@ event: "Nantes JUG"
 event_url: ""
 date: "2024-12-17"
 location: "Nantes, France"
+lat: 47.2184
+lng: -1.5536
 language: "fr"
 slides_pdf: "https://on.notist.cloud/pdf/deck-8658f7106c176f06.pdf"
 slides_url: "https://noti.st/lostinbrittany/ViuqcA/demystifier-la-creation-doperateurs-kubernetes-en-java-avec-quarkus"

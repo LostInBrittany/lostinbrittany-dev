@@ -9,6 +9,8 @@ event: "SnowCamp"
 event_url: "https://snowcamp.io/"
 date: "2026-01-15"
 location: "Grenoble, France"
+lat: 45.1885
+lng: 5.7245
 language: "fr"
 slides_pdf: "/slides/2026/2026-01-15_SnowCamp_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/DbFy2O/rediscovering-php-modern-practices-beyond-legacy"

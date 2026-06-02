@@ -9,6 +9,8 @@ event: "FinistDevs"
 event_url: "https://finistdevs.org/"
 date: "2026-01-29"
 location: "Brest, France"
+lat: 48.3904
+lng: -4.4861
 language: "fr"
 slides_pdf: "/slides/2026/2026-01-29_FinistDevs_Rediscovering-PHP_ Modern-Practices-Beyond Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/jwUREu/rediscovering-php-modern-practices-beyond-legacy"

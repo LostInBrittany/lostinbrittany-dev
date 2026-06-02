@@ -9,6 +9,8 @@ event: "DevFest Dijon"
 event_url: "https://devfest.developers-group-dijon.fr/"
 date: "2025-12-05"
 location: "Dijon, France"
+lat: 47.322
+lng: 5.0415
 language: "fr"
 slides_pdf: "/slides/2025/2025-12-05_DevFest-Dijon_htmx-Web-Components-A-Perfect-Match-for-Frontend-Development.pdf"
 slides_url: ""

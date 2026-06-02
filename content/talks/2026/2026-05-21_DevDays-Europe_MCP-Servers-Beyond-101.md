@@ -9,6 +9,8 @@ event: "DevDays Europe"
 event_url: "https://events.pinetool.ai/3574/#sessions/114843"
 date: "2026-05-21"
 location: "Vilnius, Lithuania"
+lat: 54.6872
+lng: 25.2797
 language: "en"
 slides_pdf: "/slides/2026/2026-05-21_DevDays-Europe_MCP-Servers-Beyond-101.pdf"
 slides_url: "https://noti.st/lostinbrittany/THMZuk/mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"

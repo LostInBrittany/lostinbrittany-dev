@@ -21,6 +21,43 @@ function formatTalkDate(dateString) {
   // Format date to show only month and day, as year is in the heading
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
+
+// Build the marker list for <granite-worldmap>: one marker per city (grouped
+// by coordinates). Each marker's popup lists every talk given there (event +
+// year), its hover tooltip shows the place, and its `intensity` (1..5) makes
+// cities with many talks read denser. Serialized to JSON, parsed client-side.
+const cityByCoords = new Map();
+for (const talk of collections.talks) {
+  const { lat, lng } = talk.data;
+  if (typeof lat !== 'number' || typeof lng !== 'number') continue;
+  const key = `${lat},${lng}`;
+  if (!cityByCoords.has(key)) {
+    // Strip a leading postcode (e.g. "79000 Niort, France" -> "Niort, France").
+    const place = (talk.data.location || '').replace(/^\s*\d{4,6}\s+/, '').trim();
+    cityByCoords.set(key, { lat, lng, title: place, entries: [] });
+  }
+  const year = String(new Date(talk.data.date).getUTCFullYear());
+  // Some event names already carry the year (e.g. "DevBcn 2025"); drop a
+  // trailing duplicate so the popup row doesn't read "DevBcn 2025 - 2025".
+  const label = (talk.data.event || '').replace(new RegExp(`[\\s\\-–—]*${year}$`), '').trim();
+  cityByCoords.get(key).entries.push({
+    label,
+    meta: year,
+    url: talk.url,
+    date: talk.data.date,
+  });
+}
+const mapLocations = [...cityByCoords.values()].map(city => ({
+  lat: city.lat,
+  lng: city.lng,
+  title: city.title,
+  intensity: Math.min(city.entries.length, 5),
+  // Newest talk first; drop the sort-only `date` field from the payload.
+  entries: city.entries
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .map(({ label, meta, url }) => ({ label, meta, url })),
+}));
+const mapLocationsJson = JSON.stringify(mapLocations);
 </script>
 
 <!doctype html>
@@ -48,8 +85,19 @@ function formatTalkDate(dateString) {
         </table>
       </div>
     </div>
+    <section class="talks-map">
+      <h2>Where I've been speaking</h2>
+      <granite-worldmap id="talks-worldmap"></granite-worldmap>
+    </section>
     <site-footer></site-footer>
   </main>
+  <!-- Marker data produced server-side from the talks collection. -->
+  <script type="application/json" id="talks-worldmap-data" @html="mapLocationsJson" webc:keep></script>
+  <script type="module" webc:keep>
+    import 'https://esm.sh/@granite-elements/granite-worldmap@1.2.0/granite-worldmap.js';
+    const el = document.getElementById('talks-worldmap');
+    el.locations = JSON.parse(document.getElementById('talks-worldmap-data').textContent);
+  </script>
 </body>
 </html>
 <style>
@@ -84,5 +132,26 @@ function formatTalkDate(dateString) {
   }
   #year {
     text-align: center;
+  }
+  .talks-map {
+    margin: 1rem 0 3rem;
+    padding: 0 2rem;
+  }
+  .talks-map h2 {
+    text-align: center;
+  }
+  #talks-worldmap {
+    --granite-worldmap-height: 500px;
+    --granite-worldmap-border-radius: 12px;
+    --granite-worldmap-marker-color: var(--color-accent);
+    --granite-worldmap-marker-border-color: #fff;
+    /* Floor/ceiling for the intensity opacity ramp: a one-talk city sits at
+       0.5, the busiest (5+) at full opacity, so density reads clearly. */
+    --granite-worldmap-marker-opacity: 0.5;
+    --granite-worldmap-marker-intensity-max-opacity: 1;
+    --granite-worldmap-popup-meta-color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
   }
 </style>
