@@ -102,10 +102,12 @@ const cityByCoords = new Map();
 for (const talk of collections.talks) {
   const { lat, lng } = talk.data;
   if (typeof lat !== 'number' || typeof lng !== 'number') continue;
-  const key = `${lat},${lng}`;
+  // One marker per city: group by place name so the same city recorded with
+  // slightly different coordinates or precision shares a single marker.
+  // Strip a leading postcode (e.g. "79000 Niort, France" -> "Niort, France").
+  const place = (talk.data.location || '').replace(/^\s*\d{4,6}\s+/, '').trim();
+  const key = place.toLowerCase();
   if (!cityByCoords.has(key)) {
-    // Strip a leading postcode (e.g. "79000 Niort, France" -> "Niort, France").
-    const place = (talk.data.location || '').replace(/^\s*\d{4,6}\s+/, '').trim();
     cityByCoords.set(key, { lat, lng, title: place, entries: [] });
   }
   const year = String(new Date(talk.data.date).getUTCFullYear());
