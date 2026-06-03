@@ -22,6 +22,27 @@ const recentYears = years.filter((y) => Number(y) >= RECENT_FROM);
 const olderYears = years.filter((y) => Number(y) < RECENT_FROM);
 const olderCount = olderYears.reduce((n, y) => n + talksByYear[y].length, 0);
 
+// The three most recent talks, featured as cover cards at the top ("tete de
+// gondole"), like the Notist profile highlights recent presentations.
+const latestTalks = [...collections.talks]
+  .filter((t) => Number.isFinite(new Date(t.data.date).getFullYear()))
+  .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+  .slice(0, 3);
+
+// Cover image path mirrors the talk layout: /img/talks/<year>/<slug>.jpg,
+// where <slug> is the talk URL's final path segment (== the markdown basename).
+function coverImage(talk) {
+  const slug = talk.url.split('/').filter(Boolean).pop();
+  const year = new Date(talk.data.date).getUTCFullYear();
+  return `/img/talks/${year}/${slug}.jpg`;
+}
+
+// Full date (with year) for the featured cards.
+function formatFullDate(dateString) {
+  if (!dateString) return '';
+  return new Date(dateString).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+
 function formatTalkDate(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
@@ -131,6 +152,22 @@ const mapLocationsJson = JSON.stringify(mapLocations);
       <p class="talks-stats-note">
         A near-complete archive of the talks I've given since 2017, recovered from my <a href="https://noti.st/lostinbrittany">Notist</a> profile &mdash; slides for each, and video when a recording exists.
       </p>
+      <!-- Featured: the three most recent talks as cover cards. -->
+      <section class="featured-talks" webc:if="latestTalks.length">
+        <div class="featured-grid">
+          <a class="featured-card" webc:for="talk of latestTalks" :href="talk.url">
+            <span class="featured-cover-wrap">
+              <img class="featured-cover" :src="coverImage(talk)" :alt="talk.data.title + ' slide cover'" loading="lazy" />
+            </span>
+            <span class="featured-body">
+              <span class="featured-event" @text="talk.data.event"></span>
+              <span class="featured-title" @text="talk.data.title"></span>
+              <span class="featured-date" @text="formatFullDate(talk.data.date)"></span>
+            </span>
+          </a>
+        </div>
+      </section>
+
       <!-- Recent years: each collapsible, open by default. -->
       <details class="year-section" webc:for="year of recentYears" :id="year" open>
         <summary class="year-header">
@@ -205,6 +242,80 @@ const mapLocationsJson = JSON.stringify(mapLocations);
     margin: 0 auto 0.5rem;
     font-size: 0.9rem;
     color: var(--color-text-muted);
+  }
+  /* Featured "tete de gondole": the three latest talks as cover cards. */
+  .talks-list .featured-talks {
+    margin: 1.25rem 0 0.5rem;
+  }
+  .talks-list .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .talks-list .featured-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-surface);
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .talks-list .featured-card:hover,
+  .talks-list .featured-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    outline: none;
+  }
+  .talks-list .featured-cover-wrap {
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: var(--color-surface-alt);
+  }
+  .talks-list .featured-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .talks-list .featured-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.85rem 1rem 1rem;
+    flex: 1;
+  }
+  .talks-list .featured-event {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+  .talks-list .featured-title {
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-text);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .talks-list .featured-card:hover .featured-title {
+    color: var(--color-accent);
+  }
+  .talks-list .featured-date {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: auto;
+  }
+  @media (width < 800px) {
+    .talks-list .featured-grid {
+      grid-template-columns: 1fr;
+    }
   }
   .talks-list .talks {
     list-style: none;
