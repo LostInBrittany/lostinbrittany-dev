@@ -1,0 +1,53 @@
+<div id="site-intro">
+  <script webc:type="js" webc:root>
+    (() => {
+      // Localized positioning statement shown above the fold on the home page.
+      const intros = {
+        en: {
+          lead: `Hi, I'm <strong>Horacio Gonzalez</strong> &mdash; VP of DevRel at <a href="https://clever-cloud.com">Clever Cloud</a>, international speaker, and Spaniard lost in Brittany.`,
+          sub: `I write about web development, Web Components, AI, Kubernetes and the cloud &mdash; in English, French and Spanish.`,
+        },
+        fr: {
+          lead: `Bonjour, je suis <strong>Horacio Gonzalez</strong> &mdash; VP of DevRel chez <a href="https://clever-cloud.com">Clever Cloud</a>, conf&eacute;rencier international, et Espagnol perdu en Bretagne.`,
+          sub: `J'&eacute;cris sur le d&eacute;veloppement web, les Web Components, l'IA, Kubernetes et le cloud &mdash; en fran&ccedil;ais, anglais et espagnol.`,
+        },
+        es: {
+          lead: `Hola, soy <strong>Horacio Gonzalez</strong> &mdash; VP de DevRel en <a href="https://clever-cloud.com">Clever Cloud</a>, ponente internacional y espa&ntilde;ol perdido en Breta&ntilde;a.`,
+          sub: `Escribo sobre desarrollo web, Web Components, IA, Kubernetes y la nube &mdash; en espa&ntilde;ol, franc&eacute;s e ingl&eacute;s.`,
+        },
+      };
+      const locale = ($data.locale || 'en').toLowerCase();
+      const intro = intros[locale] || intros.en;
+      return `<p class="site-intro-lead">${intro.lead}</p>
+        <p class="site-intro-sub">${intro.sub}</p>`;
+    })()
+  </script>
+</div>
+
+<style webc:scoped>
+  #site-intro {
+    max-width: 70ch;
+    margin: 2rem auto 0.5rem;
+    text-align: center;
+  }
+  #site-intro .site-intro-lead {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+    color: var(--color-text);
+  }
+  #site-intro .site-intro-sub {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+  @media (width < 600px) {
+    #site-intro .site-intro-lead {
+      font-size: 1.15rem;
+    }
+    #site-intro .site-intro-sub {
+      font-size: 1rem;
+    }
+  }
+</style>

@@ -25,6 +25,7 @@ function filterPostsByLocale(posts, locale) {
 
   <main>
     <site-header></site-header>
+    <site-intro></site-intro>
     <div id="posts-container">
       <post-details  webc:for="(index,item) in filterPostsByLocale(collections.posts, locale)"
         :@title="item.data.title" :@date="item.data.date"

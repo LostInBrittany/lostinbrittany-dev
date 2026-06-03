@@ -25,6 +25,8 @@ function notLast() {
     color: #444;
   }
   .title {
+    /* Start below any floated image bleeding down from the previous post. */
+    clear: both;
     margin-block-start: 0.5em;
     margin-block-end: 0;
   }

@@ -13,7 +13,7 @@ lng: 2.1686
 language: "en"
 slides_pdf: "https://on.notist.cloud/pdf/deck-076f9e645af24faf.pdf"
 slides_url: "https://noti.st/lostinbrittany/JpQ98Q/from-silos-to-devops-to-platform-engineering-embracing-gitops-and-going-behind-the-hype"
-video_url: 
+video_url: "https://www.youtube.com/watch?v=5woqh5aRlqw"
 talk_tags:
   - DevOps
   - Platform Engineering

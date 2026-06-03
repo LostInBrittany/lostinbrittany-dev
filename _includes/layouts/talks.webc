@@ -22,6 +22,49 @@ function formatTalkDate(dateString) {
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
 }
 
+// Strip a leading postcode (e.g. "79000 Niort, France" -> "Niort, France").
+function cleanLocation(location) {
+  return (location || '').replace(/^\s*\d{4,6}\s+/, '').trim();
+}
+
+// Map a talk language code to a short badge label + full name (for the title
+// attribute). Returns null for unknown/missing codes so the badge is skipped.
+function langInfo(code) {
+  // Flag is decorative (aria-hidden in the markup); the EN/FR/ES code + label
+  // carry the meaning, since a flag denotes a country rather than a language.
+  const map = {
+    en: { code: 'EN', label: 'In English', flag: '\u{1F1EC}\u{1F1E7}' },
+    fr: { code: 'FR', label: 'In French', flag: '\u{1F1EB}\u{1F1F7}' },
+    es: { code: 'ES', label: 'In Spanish', flag: '\u{1F1EA}\u{1F1F8}' },
+  };
+  return map[(code || '').toLowerCase()] || null;
+}
+
+// Prefer the self-hosted PDF as the direct "Slides" link, fall back to the
+// hosted slide deck (noti.st) when no PDF is recorded.
+function slidesLink(talk) {
+  return talk.data.slides_pdf || talk.data.slides_url || '';
+}
+
+// Headline stats, computed from the talks collection so they stay in sync as
+// talks are added. City = full cleaned location; country = its last segment.
+const statCities = new Set();
+const statCountries = new Set();
+for (const talk of collections.talks) {
+  const loc = cleanLocation(talk.data.location);
+  if (!loc) continue;
+  statCities.add(loc);
+  const country = loc.split(',').pop().trim();
+  if (country) statCountries.add(country);
+}
+// Count only real, dated talks: the talks listing page itself inherits the
+// "talks" tag from talks.json but has no date, so exclude undated entries.
+const talkCount = collections.talks.filter(
+  (talk) => Number.isFinite(new Date(talk.data.date).getFullYear())
+).length;
+const cityCount = statCities.size;
+const countryCount = statCountries.size;
+
 // Build the marker list for <granite-worldmap>: one marker per city (grouped
 // by coordinates). Each marker's popup lists every talk given there (event +
 // year), its hover tooltip shows the place, and its `intensity` (1..5) makes
@@ -72,17 +115,40 @@ const mapLocationsJson = JSON.stringify(mapLocations);
     <site-header></site-header>
     <div class="talks-list">
       <h1 @text="title"></h1>
+      <p class="talks-stats">
+        <span class="stat"><span class="stat-num" @text="talkCount"></span> talks</span>
+        <span class="stat"><span class="stat-num" @text="cityCount"></span> cities</span>
+        <span class="stat"><span class="stat-num" @text="countryCount"></span> countries</span>
+      </p>
+      <p class="talks-stats-note">
+        These are my talks since I joined <a href="https://clever-cloud.com">Clever Cloud</a> in 2024 &mdash; I'm gradually adding my earlier ones.
+      </p>
       <div webc:for="year of years">
         <h2 id="year" @text="year"></h2>
-        <table>
-          <tbody>
-            <tr webc:for="talk of talksByYear[year]">
-              <td><a :href="talk.url" @text="talk.data.title"></a></td>
-              <td @text="talk.data.event"></td>
-              <td @text="formatTalkDate(talk.data.date)" style="white-space: nowrap;"></td>
-            </tr>
-          </tbody>
-        </table>
+        <ul class="talks">
+          <li class="talk" webc:for="talk of talksByYear[year]">
+            <a class="talk-title" :href="talk.url" @text="talk.data.title"></a>
+            <div class="talk-meta">
+              <span class="talk-where">
+                <span class="talk-event">
+                  <a webc:if="talk.data.event_url" :href="talk.data.event_url" target="_blank" rel="noopener" @text="talk.data.event"></a>
+                  <span webc:if="!talk.data.event_url" @text="talk.data.event"></span>
+                </span>
+                <span class="talk-location" webc:if="cleanLocation(talk.data.location)" @text="cleanLocation(talk.data.location)"></span>
+                <span class="talk-lang" webc:if="langInfo(talk.data.language)" :title="langInfo(talk.data.language).label">
+                  <span class="talk-flag" aria-hidden="true" @text="langInfo(talk.data.language).flag"></span>
+                  <span @text="langInfo(talk.data.language).code"></span>
+                </span>
+                <span class="talk-date" @text="formatTalkDate(talk.data.date)"></span>
+              </span>
+              <!-- Video first so the always-present Slides link stays right-aligned across rows. -->
+              <span class="talk-links" webc:if="slidesLink(talk) || talk.data.video_url">
+                <a class="talk-link" webc:if="talk.data.video_url" :href="talk.data.video_url" target="_blank" rel="noopener">Video</a>
+                <a class="talk-link" webc:if="slidesLink(talk)" :href="slidesLink(talk)" target="_blank" rel="noopener">Slides</a>
+              </span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
     <section class="talks-map">
@@ -102,33 +168,120 @@ const mapLocationsJson = JSON.stringify(mapLocations);
 </html>
 <style>
   .talks-list {
-    max-width: 800px;
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
     padding: 2rem;
   }
-  .talks-list table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    border-style: hidden; /* No borders */
+  /* Headline stats below the title. */
+  .talks-list .talks-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem 1.25rem;
+    margin: 0.5rem 0 0.4rem;
+    font-size: 1.1rem;
+    color: var(--color-text);
   }
-  .talks-list td {
-    padding: 0.75rem 0.5rem;
-    text-align: left;
-    border: none; /* No borders */
-    border-bottom: 1px solid #eee; /* Subtle line for rows */
+  .talks-list .talks-stats .stat-num {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-right: 0.15rem;
   }
-
-  .talks-list tbody tr:hover {
+  .talks-list .talks-stats-note {
+    text-align: center;
+    max-width: 80ch;
+    margin: 0 auto 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+  .talks-list .talks {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+  .talks-list .talk {
+    padding: 0.85rem 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  .talks-list .talk:hover {
     background-color: #f9f9f9;
   }
-  .talks-list td a {
+  .talks-list .talk-title {
     text-decoration: none;
     font-weight: bold;
     color: var(--link-color);
   }
-  .talks-list a:hover {
+  .talks-list .talk-title:hover {
     text-decoration: underline;
+  }
+  /* Meta line: where/when on the left, slides/video links pushed to the right;
+     wraps below the title on narrow screens. */
+  .talks-list .talk-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+  .talks-list .talk-where {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  /* Dot separators between present meta items only. */
+  .talks-list .talk-where > * + *::before {
+    content: "\00b7";
+    margin-right: 0.5rem;
+    color: var(--color-text-muted);
+  }
+  .talks-list .talk-event a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+  .talks-list .talk-event a:hover {
+    text-decoration: underline;
+  }
+  .talks-list .talk-lang {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+  }
+  .talks-list .talk-flag {
+    font-size: 0.95rem;
+    letter-spacing: normal;
+  }
+  .talks-list .talk-links {
+    margin-left: auto;
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+  .talks-list .talk-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.6rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 999px;
+    color: var(--color-accent);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .talks-list .talk-link:hover {
+    background: var(--color-accent);
+    color: #fff;
   }
   #year {
     text-align: center;

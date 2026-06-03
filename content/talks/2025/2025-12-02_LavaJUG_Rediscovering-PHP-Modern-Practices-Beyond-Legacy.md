@@ -14,7 +14,7 @@ lng: 3.087
 language: "fr"
 slides_pdf: "/slides/2025/2025-12-02_LavaJUG_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: ""
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=Gh0FzCMt24k"
 talk_tags:
   - PHP
 
