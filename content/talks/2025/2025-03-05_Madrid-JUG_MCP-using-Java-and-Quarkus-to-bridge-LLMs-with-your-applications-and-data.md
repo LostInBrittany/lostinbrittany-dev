@@ -12,7 +12,7 @@ location: "Madrid, Spain"
 lat: 40.4168
 lng: -3.7038
 language: "en"
-slides_pdf: "/slides/2025/2025-03_05_Madrid-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-03_05_Madrid-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
 slides_url: "https://noti.st/lostinbrittany/RTCg7d/mcp-using-java-and-quarkus-to-bridge-llms-with-your-applications-and-data"
 video_url: "https://www.youtube.com/watch?v=b_h308CZsNc&list=PLZsghq6BxISSY62UCrZEvL7KhGfY3-_YT&index=2"
 talk_tags:

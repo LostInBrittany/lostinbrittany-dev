@@ -12,7 +12,7 @@ location: "Paris, France"
 lat: 48.8566
 lng: 2.3522
 language: "fr"
-slides_pdf: "/slides/2025/2025-04-16_DevoxxFR_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-04-16_DevoxxFR_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: "https://noti.st/lostinbrittany/65W77C/htmx-web-components-un-combo-parfait-pour-le-developpement-web"
 video_url: ""
 talk_tags:

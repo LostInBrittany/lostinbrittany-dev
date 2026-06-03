@@ -12,7 +12,7 @@ location: "Paris, France"
 lat: 48.8566
 lng: 2.3522
 language: "fr"
-slides_pdf: "/slides/2026/2026-04-24_Devoxx-France_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-04-24_Devoxx-France_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/2igHkB/serveurs-mcp-bonnes-pratiques-choix-de-conception-et-leurs-consequences"
 video_url: "https://www.youtube.com/watch?v=NNJC-zgsLTA"
 talk_tags:

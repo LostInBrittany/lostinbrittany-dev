@@ -12,7 +12,7 @@ location: "Tours, France"
 lat: 47.3941
 lng: 0.6848
 language: "fr"
-slides_pdf: "/slides/2026/2026-02-12_Touraine-Tech_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-02-12_Touraine-Tech_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/npP2lW/rediscovering-php-modern-practices-beyond-legacy"
 video_url: ""
 talk_tags:

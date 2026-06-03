@@ -12,7 +12,7 @@ location: "London, UK"
 lat: 51.5074
 lng: -0.1278
 language: "en"
-slides_pdf: "/slides/2026/2026-05-07_Devoxx-UK_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-05-07_Devoxx-UK_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/QOxTrm/mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"
 video_url: ""
 talk_tags:

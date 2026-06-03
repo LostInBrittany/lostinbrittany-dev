@@ -12,7 +12,7 @@ location: "Vilnius, Lithuania"
 lat: 54.6872
 lng: 25.2797
 language: "en"
-slides_pdf: "/slides/2026/2026-05-19_DevDays-Europe_Hands-on-MCP-Servers-Beyond-101.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-05-19_DevDays-Europe_Hands-on-MCP-Servers-Beyond-101.pdf"
 slides_url: "https://noti.st/lostinbrittany/qxdm2L/hands-on-mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"
 video_url: ""
 talk_tags:

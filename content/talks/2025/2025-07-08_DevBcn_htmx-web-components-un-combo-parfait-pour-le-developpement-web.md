@@ -12,7 +12,7 @@ location: "Barcelona, Spain"
 lat: 41.3874
 lng: 2.1686
 language: "fr"
-slides_pdf: "/slides/2025/2025-07-08_DevBcn_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-07-08_DevBcn_htmx-web-components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: "https://noti.st/lostinbrittany/EufYu2/htmx-web-components-a-perfect-match-for-frontend-development"
 video_url: ""
 talk_tags:

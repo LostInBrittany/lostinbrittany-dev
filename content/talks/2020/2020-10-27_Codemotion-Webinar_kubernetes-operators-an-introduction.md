@@ -1,0 +1,26 @@
+---
+layout: layouts/talk.webc
+tags:
+  - talks
+locale: "en"
+
+title: "Kubernetes Operators: An introduction"
+event: "Codemotion Webinar"
+event_url: ""
+date: "2020-10-27"
+location: "Virtual"
+language: "en"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2020/2020-10-27_Codemotion-Webinar_kubernetes-operators-an-introduction.pdf"
+slides_url: "https://noti.st/lostinbrittany/2PiLew/kubernetes-operators-an-introduction"
+video_url: ""
+talk_tags: []
+
+---
+
+Operators are extensions to Kubernetes that simplify application install and management by leveraging on manage applications Custom Resources.
+
+The Kubernetes Operator pattern tries the emulate the role of an human operator, who uses their deep knowledge of the application to install, operate and debug it. The Kubernetes Operators search to automate these tasks and facilitate the whole application life-cycle.
+
+In this talk, we will explain how do we use Kubernetes Operators at OVHcloud, and how the help us to operate our Managed Kubernetes service at scale.
+
+We will illustrate the talks with three concrete examples: Harbor Operator, LoadBalancing Operator and our incoming NodePool operator.

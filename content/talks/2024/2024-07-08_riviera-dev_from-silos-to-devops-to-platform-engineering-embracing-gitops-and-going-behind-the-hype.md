@@ -11,7 +11,7 @@ location: "Sophia Antipolis, France"
 lat: 43.6236
 lng: 7.0492
 language: "en"
-slides_pdf: "https://on.notist.cloud/pdf/deck-8ad156227b40b596.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2024/2024-07-08_riviera-dev_from-silos-to-devops-to-platform-engineering-embracing-gitops-and-going-behind-the-hype.pdf"
 slides_url: "https://noti.st/lostinbrittany/w98x0p/from-silos-to-devops-to-platform-engineering-embracing-gitops-and-going-behind-the-hype"
 video_url: 
 talk_tags:

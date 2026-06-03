@@ -12,7 +12,7 @@ location: "Madrid, Spain"
 lat: 40.4168
 lng: -3.7038
 language: "en"
-slides_pdf: "/slides/2026/2026-04-20_Codemotion-Madrid_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-04-20_Codemotion-Madrid_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/o5EfzN/rediscovering-php-modern-practices-beyond-legacy"
 video_url: ""
 talk_tags:

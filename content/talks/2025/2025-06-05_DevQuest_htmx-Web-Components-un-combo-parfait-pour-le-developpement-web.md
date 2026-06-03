@@ -12,7 +12,7 @@ location: '79000 Niort, France'
 lat: 46.3239
 lng: -0.4588
 language: 'fr'
-slides_pdf: '/slides/2025/2025-06-05_DevQuest_htmx-Web-Components-un-combo-parfait-pour-le-developpement-web.pdf'
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-06-05_DevQuest_htmx-Web-Components-un-combo-parfait-pour-le-developpement-web.pdf"
 slides_url: 'https://noti.st/lostinbrittany/tFPNjj/htmx-web-components-un-combo-parfait-pour-le-developpement-web'
 video_url: ''
 talk_tags:

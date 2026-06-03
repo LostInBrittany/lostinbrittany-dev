@@ -12,7 +12,7 @@ location: "Stockholm, Sweden"
 lat: 59.3293
 lng: 18.0686
 language: "en"
-slides_pdf: "/slides/2026/2026-02-02_Jfokus_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-02-02_Jfokus_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/EqWMPw/mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"
 video_url: ""
 talk_tags:

@@ -12,7 +12,7 @@ location: "Rouen, France"
 lat: 49.4432
 lng: 1.0993
 language: "fr"
-slides_pdf: "/slides/2025/2025-11-20_Codeurs-en-Seine_MCP-Servers-Good-Practices-Design-Choices-and-Consequences.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-11-20_Codeurs-en-Seine_MCP-Servers-Good-Practices-Design-Choices-and-Consequences.pdf"
 slides_url: ""
 video_url: ""
 talk_tags:

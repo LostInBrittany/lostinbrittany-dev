@@ -12,7 +12,7 @@ location: "Brest, France"
 lat: 48.3904
 lng: -4.4861
 language: "fr"
-slides_pdf: "/slides/2026/2026-01-29_FinistDevs_Rediscovering-PHP_ Modern-Practices-Beyond Legacy.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-01-29_FinistDevs_Rediscovering-PHP_ Modern-Practices-Beyond Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/jwUREu/rediscovering-php-modern-practices-beyond-legacy"
 video_url: ""
 talk_tags:

@@ -12,7 +12,7 @@ location: "Nantes, France"
 lat: 47.2184
 lng: -1.5536
 language: "fr"
-slides_pdf: "https://on.notist.cloud/pdf/deck-8658f7106c176f06.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2024/2024-12-17_Nantes-JUG_demystifier-la-creation-doperateurs-kubernetes-en-java-avec-quarkus.pdf"
 slides_url: "https://noti.st/lostinbrittany/ViuqcA/demystifier-la-creation-doperateurs-kubernetes-en-java-avec-quarkus"
 video_url: ""
 talk_tags:

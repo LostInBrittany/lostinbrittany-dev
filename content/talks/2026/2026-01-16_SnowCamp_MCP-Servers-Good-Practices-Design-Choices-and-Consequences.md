@@ -12,7 +12,7 @@ location: "Grenoble, France"
 lat: 45.1885
 lng: 5.7245
 language: "fr"
-slides_pdf: "/slides/2026/2026-01-16_SnowCamp_-_MCP Servers_Good-Practices-Design-Choices-and-Consequences.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-01-16_SnowCamp_-_MCP Servers_Good-Practices-Design-Choices-and-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/puylun/mcp-servers-good-practices-design-choices-and-consequences"
 video_url: ""
 talk_tags:

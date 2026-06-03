@@ -12,7 +12,7 @@ location: "Rotterdam, Netherlands"
 lat: 51.9244
 lng: 4.4777
 language: "en"
-slides_pdf: "https://on.notist.cloud/pdf/deck-c51f70c28c943e90.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2024/2024-10-04_LunaConf_operators-to-the-rescue-manage-your-external-data-and-legacy-apis-from-kubernetes.pdf"
 slides_url: "https://noti.st/lostinbrittany/LrVuPf/operators-to-the-rescue-manage-your-external-data-and-legacy-apis-from-kubernetes"
 video_url: ""
 talk_tags:

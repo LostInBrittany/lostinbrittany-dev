@@ -1,0 +1,52 @@
+<script webc:setup>
+// Renders one talk row in the talks list. Receives the `talk` collection item
+// as a prop. Helpers are kept local so the component is self-contained.
+function formatTalkDate(dateString) {
+  if (!dateString) return '';
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
+}
+
+// Strip a leading postcode (e.g. "79000 Niort, France" -> "Niort, France").
+function cleanLocation(location) {
+  return (location || '').replace(/^\s*\d{4,6}\s+/, '').trim();
+}
+
+// Talk language -> short badge code + label + decorative flag.
+function langInfo(code) {
+  const map = {
+    en: { code: 'EN', label: 'In English', flag: '\u{1F1EC}\u{1F1E7}' },
+    fr: { code: 'FR', label: 'In French', flag: '\u{1F1EB}\u{1F1F7}' },
+    es: { code: 'ES', label: 'In Spanish', flag: '\u{1F1EA}\u{1F1F8}' },
+  };
+  return map[(code || '').toLowerCase()] || null;
+}
+
+// Prefer the self-hosted/Cellar PDF, fall back to the hosted deck (noti.st).
+function slidesLink(talk) {
+  return talk.data.slides_pdf || talk.data.slides_url || '';
+}
+</script>
+
+<li class="talk">
+  <a class="talk-title" :href="talk.url" @text="talk.data.title"></a>
+  <div class="talk-meta">
+    <span class="talk-where">
+      <span class="talk-event">
+        <a webc:if="talk.data.event_url" :href="talk.data.event_url" target="_blank" rel="noopener" @text="talk.data.event"></a>
+        <span webc:if="!talk.data.event_url" @text="talk.data.event"></span>
+      </span>
+      <span class="talk-location" webc:if="cleanLocation(talk.data.location)" @text="cleanLocation(talk.data.location)"></span>
+      <span class="talk-lang" webc:if="langInfo(talk.data.language)" :title="langInfo(talk.data.language).label">
+        <span class="talk-flag" aria-hidden="true" @text="langInfo(talk.data.language).flag"></span>
+        <span @text="langInfo(talk.data.language).code"></span>
+      </span>
+      <span class="talk-date" @text="formatTalkDate(talk.data.date)"></span>
+    </span>
+    <!-- Video first so the always-present Slides link stays right-aligned across rows. -->
+    <span class="talk-links" webc:if="slidesLink(talk) || talk.data.video_url">
+      <a class="talk-link" webc:if="talk.data.video_url" :href="talk.data.video_url" target="_blank" rel="noopener">Video</a>
+      <a class="talk-link" webc:if="slidesLink(talk)" :href="slidesLink(talk)" target="_blank" rel="noopener">Slides</a>
+    </span>
+  </div>
+</li>

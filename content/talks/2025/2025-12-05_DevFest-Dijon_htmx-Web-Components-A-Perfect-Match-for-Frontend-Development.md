@@ -12,7 +12,7 @@ location: "Dijon, France"
 lat: 47.322
 lng: 5.0415
 language: "fr"
-slides_pdf: "/slides/2025/2025-12-05_DevFest-Dijon_htmx-Web-Components-A-Perfect-Match-for-Frontend-Development.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-12-05_DevFest-Dijon_htmx-Web-Components-A-Perfect-Match-for-Frontend-Development.pdf"
 slides_url: ""
 video_url: ""
 talk_tags:

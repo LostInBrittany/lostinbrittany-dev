@@ -61,10 +61,11 @@ module.exports = function(eleventyConfig) {
   });
 
   
-  // Copy static assets to the output directory
+  // Copy static assets to the output directory.
+  // Slide PDFs are hosted on Clever Cloud Cellar (see slides_pdf URLs in talk
+  // front matter), so they are not passed through into the build.
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('slides');
 
   return {
     // These are all optional:

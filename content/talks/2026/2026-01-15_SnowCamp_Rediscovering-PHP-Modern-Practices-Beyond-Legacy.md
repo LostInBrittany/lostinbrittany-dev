@@ -12,7 +12,7 @@ location: "Grenoble, France"
 lat: 45.1885
 lng: 5.7245
 language: "fr"
-slides_pdf: "/slides/2026/2026-01-15_SnowCamp_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-01-15_SnowCamp_Rediscovering-PHP-Modern-Practices-Beyond-Legacy.pdf"
 slides_url: "https://noti.st/lostinbrittany/DbFy2O/rediscovering-php-modern-practices-beyond-legacy"
 video_url: ""
 talk_tags:

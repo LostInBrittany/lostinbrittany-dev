@@ -12,7 +12,7 @@ location: "Nantes, France"
 lat: 47.2184
 lng: -1.5536
 language: "fr"
-slides_pdf: "/slides/2025/2025-09-23_Zenika_Night_Clazz_-_Building_smarter_MCP_servers.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-09-23_Zenika_Night_Clazz_-_Building_smarter_MCP_servers.pdf"
 slides_url: "https://noti.st/lostinbrittany/a5kjeT/building-smarter-mcp-servers-generic-vs-domain-specific-approaches"
 video_url: ""
 talk_tags:

@@ -12,7 +12,7 @@ location: "Stockholm, Sweden"
 lat: 59.3293
 lng: 18.0686
 language: "en"
-slides_pdf: "/slides/2025/2025-02-04_Jfokus_htmx-2-0-web-components-a-perfect-match-for-frontend-development.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-02-04_Jfokus_htmx-2-0-web-components-a-perfect-match-for-frontend-development.pdf"
 slides_url: "https://noti.st/lostinbrittany/O2j64s/htmx-2-0-web-components-a-perfect-match-for-frontend-development"
 video_url: "https://www.youtube.com/watch?v=kNANomvFz-E&list=PLZsghq6BxISSY62UCrZEvL7KhGfY3-_YT&index=3"
 talk_tags:

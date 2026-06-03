@@ -15,6 +15,13 @@ for (const talk of [...collections.talks].reverse()) {
 // Get a sorted list of years (descending)
 const years = Object.keys(talksByYear).sort((a, b) => b - a);
 
+// Recent years stay open by default; everything before is tucked behind a
+// single collapsible "Older talks" section.
+const RECENT_FROM = 2024;
+const recentYears = years.filter((y) => Number(y) >= RECENT_FROM);
+const olderYears = years.filter((y) => Number(y) < RECENT_FROM);
+const olderCount = olderYears.reduce((n, y) => n + talksByYear[y].length, 0);
+
 function formatTalkDate(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
@@ -52,7 +59,8 @@ const statCities = new Set();
 const statCountries = new Set();
 for (const talk of collections.talks) {
   const loc = cleanLocation(talk.data.location);
-  if (!loc) continue;
+  // Skip online talks: "Virtual" is not a real city or country.
+  if (!loc || /^virtual$/i.test(loc)) continue;
   statCities.add(loc);
   const country = loc.split(',').pop().trim();
   if (country) statCountries.add(country);
@@ -121,35 +129,35 @@ const mapLocationsJson = JSON.stringify(mapLocations);
         <span class="stat"><span class="stat-num" @text="countryCount"></span> countries</span>
       </p>
       <p class="talks-stats-note">
-        These are my talks since I joined <a href="https://clever-cloud.com">Clever Cloud</a> in 2024 &mdash; I'm gradually adding my earlier ones.
+        A near-complete archive of the talks I've given since 2017, recovered from my <a href="https://noti.st/lostinbrittany">Notist</a> profile &mdash; slides for each, and video when a recording exists.
       </p>
-      <div webc:for="year of years">
-        <h2 id="year" @text="year"></h2>
+      <!-- Recent years: each collapsible, open by default. -->
+      <details class="year-section" webc:for="year of recentYears" :id="year" open>
+        <summary class="year-header">
+          <h2 class="year-label" @text="year"></h2>
+          <span class="year-count" @text="talksByYear[year].length + (talksByYear[year].length === 1 ? ' talk' : ' talks')"></span>
+        </summary>
         <ul class="talks">
-          <li class="talk" webc:for="talk of talksByYear[year]">
-            <a class="talk-title" :href="talk.url" @text="talk.data.title"></a>
-            <div class="talk-meta">
-              <span class="talk-where">
-                <span class="talk-event">
-                  <a webc:if="talk.data.event_url" :href="talk.data.event_url" target="_blank" rel="noopener" @text="talk.data.event"></a>
-                  <span webc:if="!talk.data.event_url" @text="talk.data.event"></span>
-                </span>
-                <span class="talk-location" webc:if="cleanLocation(talk.data.location)" @text="cleanLocation(talk.data.location)"></span>
-                <span class="talk-lang" webc:if="langInfo(talk.data.language)" :title="langInfo(talk.data.language).label">
-                  <span class="talk-flag" aria-hidden="true" @text="langInfo(talk.data.language).flag"></span>
-                  <span @text="langInfo(talk.data.language).code"></span>
-                </span>
-                <span class="talk-date" @text="formatTalkDate(talk.data.date)"></span>
-              </span>
-              <!-- Video first so the always-present Slides link stays right-aligned across rows. -->
-              <span class="talk-links" webc:if="slidesLink(talk) || talk.data.video_url">
-                <a class="talk-link" webc:if="talk.data.video_url" :href="talk.data.video_url" target="_blank" rel="noopener">Video</a>
-                <a class="talk-link" webc:if="slidesLink(talk)" :href="slidesLink(talk)" target="_blank" rel="noopener">Slides</a>
-              </span>
-            </div>
-          </li>
+          <talk-row webc:for="talk of talksByYear[year]" :@talk="talk"></talk-row>
         </ul>
-      </div>
+      </details>
+
+      <!-- Everything before RECENT_FROM, tucked behind one collapsed toggle. -->
+      <details class="older-talks" webc:if="olderYears.length">
+        <summary class="older-header">
+          <span class="older-label">Older talks</span>
+          <span class="older-count" @text="olderCount + ' talks · ' + olderYears[olderYears.length - 1] + '–' + olderYears[0]"></span>
+        </summary>
+        <details class="year-section" webc:for="year of olderYears" :id="year">
+          <summary class="year-header">
+            <h2 class="year-label" @text="year"></h2>
+            <span class="year-count" @text="talksByYear[year].length + (talksByYear[year].length === 1 ? ' talk' : ' talks')"></span>
+          </summary>
+          <ul class="talks">
+            <talk-row webc:for="talk of talksByYear[year]" :@talk="talk"></talk-row>
+          </ul>
+        </details>
+      </details>
     </div>
     <section class="talks-map">
       <h2>Where I've been speaking</h2>
@@ -283,8 +291,90 @@ const mapLocationsJson = JSON.stringify(mapLocations);
     background: var(--color-accent);
     color: #fff;
   }
-  #year {
-    text-align: center;
+  /* Collapsible year sections. */
+  .talks-list .year-section {
+    border-top: 1px solid var(--color-border);
+  }
+  .talks-list .year-header {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.9rem 0 0.4rem;
+    user-select: none;
+  }
+  .talks-list .year-header::-webkit-details-marker {
+    display: none;
+  }
+  /* Custom disclosure caret (ASCII-safe unicode escapes), rotates when open. */
+  .talks-list .year-header::before {
+    content: "\25B8";
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+  }
+  .talks-list .year-section[open] .year-header::before {
+    content: "\25BE";
+  }
+  .talks-list .year-label {
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .talks-list .year-count {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+  .talks-list .year-header:hover .year-label,
+  .talks-list .year-header:focus-visible .year-label {
+    color: var(--color-accent);
+  }
+  /* "Older talks" master toggle that wraps the pre-2024 years. */
+  .talks-list .older-talks {
+    border-top: 2px solid var(--color-border);
+    margin-top: 1.5rem;
+  }
+  .talks-list .older-header {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1.2rem 0;
+  }
+  .talks-list .older-header::-webkit-details-marker {
+    display: none;
+  }
+  .talks-list .older-header::before {
+    content: "\25B8";
+    color: var(--color-accent);
+    font-size: 1.1rem;
+  }
+  .talks-list .older-talks[open] .older-header::before {
+    content: "\25BE";
+  }
+  .talks-list .older-label {
+    font-family: var(--font-heading);
+    /* Match the year headings (main h2). */
+    font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
+  }
+  .talks-list .older-count {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+  .talks-list .older-header:hover .older-label,
+  .talks-list .older-header:focus-visible .older-label {
+    color: var(--color-accent);
+  }
+  /* Nested year headers inside "Older talks" sit a notch smaller. */
+  .talks-list .older-talks .year-label {
+    font-size: 1.9rem;
   }
   .talks-map {
     margin: 1rem 0 3rem;

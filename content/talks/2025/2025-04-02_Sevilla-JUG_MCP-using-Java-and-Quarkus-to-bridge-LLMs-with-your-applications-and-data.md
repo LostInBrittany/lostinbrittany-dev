@@ -12,7 +12,7 @@ location: "Seville, Spain"
 lat: 37.3891
 lng: -5.9845
 language: "en"
-slides_pdf: "/slides/2025/2025-04-02_Sevilla-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
+slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2025/2025-04-02_Sevilla-JUG_MCP-using-Java-and-Quarkus-to-bridge-LLMs-with-your-applications-and-data.pdf"
 slides_url: "https://noti.st/lostinbrittany/3mvU02/mcp-using-java-and-quarkus-to-bridge-llms-with-your-applications-and-data"
 video_url: ""
 talk_tags:
