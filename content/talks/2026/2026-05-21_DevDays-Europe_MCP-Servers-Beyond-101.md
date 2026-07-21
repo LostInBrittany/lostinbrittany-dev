@@ -14,7 +14,7 @@ lng: 25.2797
 language: "en"
 slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-05-21_DevDays-Europe_MCP-Servers-Beyond-101.pdf"
 slides_url: "https://noti.st/lostinbrittany/THMZuk/mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=b4mp6V_wyKE"
 talk_tags:
   - MCP
   - AI
