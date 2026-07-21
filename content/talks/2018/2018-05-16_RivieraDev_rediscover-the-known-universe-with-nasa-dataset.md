@@ -8,7 +8,7 @@ title: "Rediscover the known Universe with NASA dataset"
 event: "RivieraDev"
 event_url: ""
 date: "2018-05-16"
-location: "Nice, France"
+location: "Sophia Antipolis, France"
 lat: 43.710173
 lng: 7.261953
 language: "fr"
