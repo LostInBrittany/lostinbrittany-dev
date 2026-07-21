@@ -14,7 +14,7 @@ lng: 0.6848
 language: "fr"
 slides_pdf: "https://lostinbrittany-slidedecks.cellar-c2.services.clever-cloud.com/2026/2026-02-13_Touraine-Tech_MCP-Servers-Beyond-101-Good-Practices-Design-Choices-and-Their-Consequences.pdf"
 slides_url: "https://noti.st/lostinbrittany/BVgEt7/mcp-servers-beyond-101-good-practices-design-choices-and-their-consequences"
-video_url: ""
+video_url: "https://www.youtube.com/watch?v=yox_6SVz6x8"
 talk_tags:
   - MCP
   - AI
