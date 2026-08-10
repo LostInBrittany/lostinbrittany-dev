@@ -39,8 +39,18 @@
   function siteName() {
     return String(global.title || "").trim();
   }
+  function stripInlineMarkup(text) {
+    // Some titles carry real markup (<i>, <sup>, <br />). Neither a <title>
+    // nor a meta attribute can render it, and letting an HTML binding parse it
+    // silently rewrites or drops characters. Strip named tags only, so
+    // decorative text such as `</>` — no tag name — survives untouched.
+    return String(text)
+      .replace(/<br\s*\/?>/gi, " ")
+      .replace(/<\/?(?:i|b|em|strong|sup|sub|code|span|small|u)\b[^>]*>/gi, "")
+      .replace(/\s{2,}/g, " ");
+  }
   function metaTitle(title) {
-    return String(title || global.title || "").trim();
+    return stripInlineMarkup(title || global.title || "").trim();
   }
   function metaDescription(description) {
     // Folded YAML scalars (`description: >`) carry a trailing newline.
@@ -62,6 +72,8 @@
     return map[locale || DEFAULT_LOCALE] || "en_US";
   }
 </script>
+
+<title @text="metaTitle(title)"></title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

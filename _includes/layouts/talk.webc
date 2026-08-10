@@ -23,8 +23,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title @html="getFullTitle(date, event, title)"></title>
-
   <meta webc:is="head-commons" webc:nokeep
         :@title="getFullTitle(date, event, title)"
         :@description="getDescription(date, event, title, location)"
