@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: Le DevRel chez Clever Cloud
+description: "Chez Clever Cloud, le DevRel n'est pas une équipe, c'est l'affaire de tous."
 date: '2025-03-11'
 permalink: '/fr/devrel-chez-clever-cloud/'
 tags: ['posts']

@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Under the hood'
+description: "I know WordPress inside out. I still built this blog with Eleventy and WebC."
 date: '2023-10-09'
 permalink: '/en/under-the-hood/'
 tags: ['posts']

@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Differently Human'
+description: "LLMs generate code. They can't generate understanding, or be held accountable."
 date: '2025-11-27'
 permalink: '/en/differently-human/'
 tags: ['posts']

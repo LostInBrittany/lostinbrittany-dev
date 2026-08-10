@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Teaching the next generation'
+description: "Perfect code in two days, and nothing learned. Teaching when friction is gone."
 date: '2025-11-25'
 permalink: '/en/teaching-the-next-generation/'
 tags: ['posts']

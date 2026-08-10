@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Hello world!'
+description: "Vingt ans de blog, et un nouveau départ. Cette fois avec un cap plus clair."
 date: '2023-10-05'
 permalink: '/fr/hello-world/'
 tags: ['posts']

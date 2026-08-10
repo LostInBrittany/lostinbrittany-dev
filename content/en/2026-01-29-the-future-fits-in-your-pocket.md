@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'The Future Fits in Your Pocket: Running a Thinking Model on My Phone'
+description: "A thinking model in under a gigabyte, running offline on a mid-range Android."
 date: '2026-01-29'
 permalink: '/en/the-future-fits-in-your-pocket/'
 tags: ['posts']

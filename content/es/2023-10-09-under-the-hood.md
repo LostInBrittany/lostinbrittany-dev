@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Bajo el capó'
+description: "Conozco WordPress al dedillo. Aun así elegí Eleventy y WebC para este blog."
 date: '2023-10-09'
 permalink: '/es/bajo-el-capo/'
 tags: ['posts']

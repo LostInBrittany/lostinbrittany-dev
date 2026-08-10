@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'When Tools Learn, So Must We'
+description: "Automation doesn't erase skill – it moves it somewhere the tools can't reach."
 date: '2025-11-10'
 permalink: '/en/when-tools-learn/'
 tags: ['posts']

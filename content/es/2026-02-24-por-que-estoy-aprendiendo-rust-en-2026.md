@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: "Por qué estoy aprendiendo Rust en 2026"
+description: "No para escribirlo más rápido, sino para juzgar el código que escribe un agente."
 date: '2026-02-24'
 permalink: '/es/por-que-estoy-aprendiendo-rust-en-2026/'
 tags: ['posts']

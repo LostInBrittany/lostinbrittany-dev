@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: "Why I do DevRel and why I intend to keep doing it"
+description: "AI is eating the discovery channels. It can't produce the spark in someone's eyes."
 date: '2026-07-05'
 permalink: '/en/why-i-do-devrel-and-why-i-intend-to-keep-doing-it/'
 tags: ['posts']

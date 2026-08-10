@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Construire des serveurs MCP plus intelligents — De la théorie à la pratique'
+description: "Concevoir une API pour un client qui hallucine, devine et ignore vos consignes."
 date: '2025-09-23'
 permalink: '/fr/construire-des-serveurs-mcp-plus-intelligents-de-la-theorie-a-la-pratique/'
 tags: ['posts']

@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Co-Authoring with the Machine'
+description: "From syntax recall to intent articulation. The bottleneck moved to semantics."
 date: '2025-11-12'
 permalink: '/en/co-authoring-with-the-machine/'
 tags: ['posts']

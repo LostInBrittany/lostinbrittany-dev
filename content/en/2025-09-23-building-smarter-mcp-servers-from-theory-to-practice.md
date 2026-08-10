@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Building Smarter MCP Servers — From Theory to Practice'
+description: "Designing an API for a client that hallucinates, guesses, and ignores your docs."
 date: '2025-09-23'
 permalink: '/en/building-smarter-mcp-servers-from-theory-to-practice/'
 tags: ['posts']

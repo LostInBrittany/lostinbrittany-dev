@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Rewriting the role: Developers in the age of LLMs'
+description: "The full six-part series on how the developer's role shifts in the age of LLMs."
 date: '2026-02-11'
 permalink: '/en/rewriting-the-role/'
 tags: ['posts']

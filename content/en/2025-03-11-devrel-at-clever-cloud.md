@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: DevRel at Clever Cloud
+description: "At Clever Cloud, DevRel isn't a team. It's everyone's job, and that's on purpose."
 date: '2025-03-11'
 permalink: '/en/devrel-at-clever-cloud/'
 tags: ['posts']

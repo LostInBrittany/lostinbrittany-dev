@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: "Pourquoi je fais du DevRel et pourquoi je compte continuer"
+description: "L'IA dévore les canaux de découverte. Pas l'étincelle dans le regard des gens."
 date: '2026-07-05'
 permalink: '/fr/pourquoi-je-fais-du-devrel-et-pourquoi-je-compte-continuer/'
 tags: ['posts']

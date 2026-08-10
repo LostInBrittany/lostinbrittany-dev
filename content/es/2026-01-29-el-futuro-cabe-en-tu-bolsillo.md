@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'El futuro cabe en tu bolsillo: ejecutando un modelo de razonamiento en mi teléfono'
+description: "Un modelo de razonamiento en menos de un giga, sin conexión, en un Android."
 date: '2026-01-29'
 permalink: '/es/el-futuro-cabe-en-tu-bolsillo/'
 tags: ['posts']

@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: '¡Hola mundo!'
+description: "Veinte años de blog y otro nuevo comienzo, esta vez con un rumbo más claro."
 date: '2023-10-05'
 permalink: '/es/hola-mundo/'
 tags: ['posts']

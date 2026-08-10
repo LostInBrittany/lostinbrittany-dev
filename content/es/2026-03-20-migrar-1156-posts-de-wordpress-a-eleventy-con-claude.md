@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: "Migrar 1156 posts de WordPress a Eleventy con Claude"
+description: "Veinte años de blog, 1156 entradas y sus comentarios, fuera de WordPress."
 date: '2026-03-20'
 permalink: '/es/migrar-1156-posts-de-wordpress-a-eleventy-con-claude/'
 tags: ['posts']

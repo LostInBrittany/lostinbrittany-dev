@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Programmers Are Always Doomed...'
+description: "Fortran, Java, low-code, LLMs. Every wave ends programming. It never quite does."
 date: '2025-11-07'
 permalink: '/en/programmers-are-always-doomed/'
 tags: ['posts']

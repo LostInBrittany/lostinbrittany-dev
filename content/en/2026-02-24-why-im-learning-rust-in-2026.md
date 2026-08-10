@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: "Why I'm Learning Rust in 2026"
+description: "Not to type it faster. To tell whether the code an agent just wrote is safe."
 date: '2026-02-24'
 permalink: '/en/why-im-learning-rust-in-2026/'
 tags: ['posts']

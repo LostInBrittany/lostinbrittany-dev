@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Understanding MCP servers: generic vs. domain-specific approaches'
+description: "Generic or domain-specific? The MCP server choice that shapes everything after."
 date: '2025-05-16'
 permalink: '/en/understanding-mcp-servers/'
 tags: ['posts']

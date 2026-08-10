@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Construyendo servidores MCP más inteligentes — De la teoría a la práctica'
+description: "Diseñar una API para un cliente que alucina, adivina e ignora tus instrucciones."
 date: '2025-09-23'
 permalink: '/es/construyendo-servidores-mcp-mas-inteligentes-de-la-teoria-a-la-practica/'
 tags: ['posts']

@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: "Por qué hago DevRel y por qué pienso seguir haciéndolo"
+description: "La IA devora los canales de descubrimiento, no el brillo en los ojos de alguien."
 date: '2026-07-05'
 permalink: '/es/por-que-hago-devrel-y-por-que-pienso-seguir-haciendolo/'
 tags: ['posts']

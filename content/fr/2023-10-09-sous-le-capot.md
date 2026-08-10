@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Sous le capot'
+description: "Je connais WordPress par cœur. J'ai quand même choisi Eleventy et WebC."
 date: '2023-10-09'
 permalink: '/fr/sous-le-capot/'
 tags: ['posts']

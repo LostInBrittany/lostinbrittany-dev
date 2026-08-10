@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'The Developer’s Journey'
+description: "The boring work taught us to code. Now it's automated. What replaces the grind?"
 date: '2025-11-17'
 permalink: '/en/developers-journey/'
 tags: ['posts']

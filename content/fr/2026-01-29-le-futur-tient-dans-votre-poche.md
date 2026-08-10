@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Le futur tient dans votre poche : faire tourner un modèle de raisonnement sur mon téléphone'
+description: "Un modèle de raisonnement en moins d'un Go, hors ligne, sur un Android moyen."
 date: '2026-01-29'
 permalink: '/fr/le-futur-tient-dans-votre-poche/'
 tags: ['posts']

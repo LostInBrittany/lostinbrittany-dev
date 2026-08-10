@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Comprendre les serveurs MCP : approches génériques ou spécifiques au domaine'
+description: "Générique ou spécifique au domaine ? Le choix de conception qui change tout."
 date: '2025-05-16'
 permalink: '/fr/comprendre-les-serveurs-mcp/'
 tags: ['posts']

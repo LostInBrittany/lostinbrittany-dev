@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.webc
 title: 'Entendiendo los servidores MCP: enfoques genéricos vs. específicos de dominio'
+description: "¿Genérico o específico de dominio? La decisión de diseño que lo cambia todo."
 date: '2025-05-16'
 permalink: '/es/entendiendo-los-servidores-mcp/'
 tags: ['posts']
