@@ -1,59 +1,91 @@
 <script webc:setup>
-  // Scoping rules this component relies on (verified against a build):
-  //  - Attribute expressions below only see values passed as props at the call
-  //    site (`:@name="..."`). The `:name="..."` form is a plain attribute and is
-  //    discarded by `webc:nokeep`, so it never reaches here.
-  //  - A `webc:setup` block cannot read per-page data: `page`, `title`,
-  //    `description` etc. resolve to a single shared object for the whole build
-  //    and would be stale on every page but one. Only site-wide `global` is
-  //    identical everywhere and therefore safe to read here.
-  // Hence: helpers read `global`, and every page-specific value arrives as an
-  // argument. Never introduce a setup-scope binding named after a prop - it
+  // ── Shared head-commons ────────────────────────────────────────────────────
+  // Keep this setup block and the meta block below identical across
+  // lostinbrittany.org / lostinbrittany.com / lostinbrittany.dev /
+  // korriganpress. Only SITE KNOBS and the font/stylesheet links differ.
+  //
+  // Scoping rules this component depends on (verified against real builds):
+  //  1. `global.*` cannot be dereferenced in the attribute bindings below.
+  //     Site-wide data must be read through a helper defined in here.
+  //  2. This setup block cannot read per-page data: `page`, `title`,
+  //     `description` … resolve to a single shared object for the whole build,
+  //     so reading them here yields some other page's values.
+  //  3. Therefore every page-specific value arrives as a prop from the layout
+  //     and is passed into these helpers as an argument.
+  // Corollary: never declare a setup-scope binding named after a prop — it
   // shadows the prop wherever a layout forgets to pass it.
+  //
+  // Props each layout should pass:
+  //   title, description, image, url, locale, canonical_url, type
+
+  // ── SITE KNOBS ──
+  const ASSET_PREFIX = "";            // assets are served from the site root
+  const DEFAULT_LOCALE = "en";    // og:locale for pages that declare none
+
   function siteUrl() {
-    return global.baseUrl.replace(/\/$/, "");
+    return String(global.url || "").replace(/\/+$/, "");
   }
-  function getAuthor() {
-    return global.author;
+  function assetUrl(path) {
+    return `${ASSET_PREFIX}/${String(path).replace(/^\//, "")}`;
   }
-  function getTitle(title) {
-    return String(title || global.title).trim();
-  }
-  function getDescription(description) {
-    return String(description || global.description).trim();
-  }
-  function getSocialImage(social) {
-    if (!social) return global.defaultSocialImage;
-    if (/^https?:\/\//.test(social)) return social;
-    return `${siteUrl()}/img/${social.replace(/^\//, "")}`;
-  }
-  function getUrl(url) {
-    if (!url) return siteUrl();
+  function absoluteUrl(url) {
+    if (!url) return siteUrl() + "/";
     if (/^https?:\/\//.test(url)) return url;
-    return siteUrl() + (url.startsWith("/") ? url : `/${url}`);
+    return siteUrl() + (String(url).startsWith("/") ? url : `/${url}`);
+  }
+  function metaAuthor() {
+    return String(global.author || "").trim();
+  }
+  function siteName() {
+    return String(global.title || "").trim();
+  }
+  function metaTitle(title) {
+    return String(title || global.title || "").trim();
+  }
+  function metaDescription(description) {
+    // Folded YAML scalars (`description: >`) carry a trailing newline.
+    return String(description || global.description || "").trim();
+  }
+  function metaImage(image) {
+    if (!image) return String(global.defaultSocialImage || "");
+    if (/^https?:\/\//.test(image)) return image;
+    // A leading slash means the front matter already wrote a site-root path;
+    // a bare value is taken as relative to the site's image directory.
+    const path = String(image).startsWith("/") ? String(image) : `/img/${image}`;
+    return absoluteUrl(assetUrl(path));
+  }
+  function metaType(type) {
+    return String(type || "website");
+  }
+  function ogLocale(locale) {
+    const map = { en: "en_US", fr: "fr_FR", es: "es_ES" };
+    return map[locale || DEFAULT_LOCALE] || "en_US";
   }
 </script>
 
-<title @html="getTitle(title)"></title>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="/img/favicon.png" type="image/png">
+<link rel="icon" :href="assetUrl('/img/favicon.png')" type="image/png">
 
-<meta name="author" :content="getAuthor()">
-<meta name="description" :content="getDescription(description)">
+<meta name="author" :content="metaAuthor()">
+<meta name="description" :content="metaDescription(description)">
 
-<meta property="og:title" :content="getTitle(title)">
-<meta name="twitter:title" :content="getTitle(title)">
-<meta property="og:description" :content="getDescription(description)">
-<meta name="twitter:description" :content="getDescription(description)">
-<meta property="og:image" :content="getSocialImage(social)">
-<meta name="twitter:image" :content="getSocialImage(social)">
+<meta property="og:type" :content="metaType(type)">
+<meta property="og:site_name" :content="siteName()">
+<meta property="og:locale" :content="ogLocale(locale)">
+<meta property="og:title" :content="metaTitle(title)">
+<meta property="og:description" :content="metaDescription(description)">
+<meta property="og:image" :content="metaImage(image)">
+<meta property="og:url" :content="absoluteUrl(url)">
+
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:url" :content="getUrl(url)">
+<meta name="twitter:title" :content="metaTitle(title)">
+<meta name="twitter:description" :content="metaDescription(description)">
+<meta name="twitter:image" :content="metaImage(image)">
+
+<link webc:if="canonical_url" rel="canonical" :href="canonical_url">
 
 <link rel="preconnect" href="https://fonts.googleapis.com"  webc:keep>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin  webc:keep>
 <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet"  webc:keep>
 <link rel="stylesheet" href="/css/main.css" webc:keep>
-<link webc:if="canonical_url" rel="canonical" :href="canonical_url">

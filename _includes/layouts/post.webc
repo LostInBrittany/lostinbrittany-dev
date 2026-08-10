@@ -4,7 +4,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta webc:is="head-commons" webc:nokeep :@title="title" :@description="description" :@url="page.url" :@social="social" :@canonical_url="canonical_url">
+  <title @html="title || global.title"></title>
+
+  <meta webc:is="head-commons" webc:nokeep
+        :@title="title" :@description="description" :@url="page.url"
+        :@image="social" :@locale="locale"
+        :@canonical_url="canonical_url" :@type="'article'">
 
   <!-- Default bucket -->
   <style @raw="getBundle('css')" webc:keep></style>
