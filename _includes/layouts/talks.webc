@@ -137,7 +137,7 @@ const mapLocationsJson = JSON.stringify(mapLocations);
 <!doctype html>
 <html lang="en">
 <head>
-  <meta webc:is="head-commons" webc:nokeep :@title="page.title" :@global="global" :@url="page.url" >
+  <meta webc:is="head-commons" webc:nokeep :@title="title" :@description="description" :@url="page.url">
   <style @raw="getBundle('css')" webc:keep></style>
   <script @raw="getBundle('js')" webc:keep></script>
 </head>

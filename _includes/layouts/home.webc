@@ -15,7 +15,7 @@ function filterPostsByLocale(posts, locale) {
 <!doctype html>
 <html lang="en">
 <head>
-  <meta webc:is="head-commons" webc:nokeep :title="title" :url="global.url">
+  <meta webc:is="head-commons" webc:nokeep :@title="title" :@description="description" :@url="page.url">
 
   <!-- Default bucket -->
   <style @raw="getBundle('css')" webc:keep></style>

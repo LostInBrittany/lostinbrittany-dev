@@ -1,17 +1,37 @@
 <script webc:setup>
+  // Scoping rules this component relies on (verified against a build):
+  //  - Attribute expressions below only see values passed as props at the call
+  //    site (`:@name="..."`). The `:name="..."` form is a plain attribute and is
+  //    discarded by `webc:nokeep`, so it never reaches here.
+  //  - A `webc:setup` block cannot read per-page data: `page`, `title`,
+  //    `description` etc. resolve to a single shared object for the whole build
+  //    and would be stale on every page but one. Only site-wide `global` is
+  //    identical everywhere and therefore safe to read here.
+  // Hence: helpers read `global`, and every page-specific value arrives as an
+  // argument. Never introduce a setup-scope binding named after a prop - it
+  // shadows the prop wherever a layout forgets to pass it.
+  function siteUrl() {
+    return global.baseUrl.replace(/\/$/, "");
+  }
+  function getAuthor() {
+    return global.author;
+  }
   function getTitle(title) {
-    return title || global.title;
+    return String(title || global.title).trim();
   }
   function getDescription(description) {
-    return description || global.description;
+    return String(description || global.description).trim();
   }
   function getSocialImage(social) {
-    return social ? `${global.baseUrl}/img/${social}` : global.defaultSocialImage;
+    if (!social) return global.defaultSocialImage;
+    if (/^https?:\/\//.test(social)) return social;
+    return `${siteUrl()}/img/${social.replace(/^\//, "")}`;
   }
   function getUrl(url) {
-    return `${global.baseUrl}${url || ""}`;
+    if (!url) return siteUrl();
+    if (/^https?:\/\//.test(url)) return url;
+    return siteUrl() + (url.startsWith("/") ? url : `/${url}`);
   }
-  const url = getUrl();
 </script>
 
 <title @html="getTitle(title)"></title>
@@ -20,13 +40,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="/img/favicon.png" type="image/png">
 
-<meta name="author" :content="global.author">
+<meta name="author" :content="getAuthor()">
 <meta name="description" :content="getDescription(description)">
 
 <meta property="og:title" :content="getTitle(title)">
 <meta name="twitter:title" :content="getTitle(title)">
 <meta property="og:description" :content="getDescription(description)">
-<meta property="twitter:description" :content="getDescription(description)">
+<meta name="twitter:description" :content="getDescription(description)">
 <meta property="og:image" :content="getSocialImage(social)">
 <meta name="twitter:image" :content="getSocialImage(social)">
 <meta name="twitter:card" content="summary_large_image">

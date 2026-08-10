@@ -23,7 +23,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta webc:is="head-commons" webc:nokeep :@title="getFullTitle(date, event, title)" :@global="global" :@url="page.url" :@social="getSocialImage(date, page.url)" :@canonical_url="canonical_url" :@description="getDescription(date, event, title, location)">
+  <meta webc:is="head-commons" webc:nokeep :@title="getFullTitle(date, event, title)" :@url="page.url" :@social="getSocialImage(date, page.url)" :@canonical_url="canonical_url" :@description="getDescription(date, event, title, location)">
 
   <!-- Default bucket -->
   <style @raw="getBundle('css')" webc:keep></style>
