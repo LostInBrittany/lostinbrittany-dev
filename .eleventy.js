@@ -66,6 +66,8 @@ module.exports = function(eleventyConfig) {
   // front matter), so they are not passed through into the build.
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy('img');
+  // Only the compressed audio is published; source WAVs stay in the repo.
+  eleventyConfig.addPassthroughCopy('assets/**/*.m4a');
 
   return {
     // These are all optional:
