@@ -6,7 +6,7 @@ locale: "en"
 
 title: "Building Smarter MCP Servers: Generic vs. Domain-Specific Approaches"
 event: "Zenika Night Clazz Nantes"
-event_url: "hhttps://www.jugsummercamp.org/edition/16/presentations/cmbnc7aae04adp93m6814qhj4"
+event_url: "https://www.jugsummercamp.org/edition/16/presentations/cmbnc7aae04adp93m6814qhj4"
 date: "2025-09-23"
 location: "Nantes, France"
 lat: 47.2184
