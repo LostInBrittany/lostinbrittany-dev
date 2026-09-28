@@ -1,3 +1,4 @@
+<!doctype html>
 <script webc:setup>
   function getFullTitle(date,event,title) {
     return `${new Date(date).toISOString().split('T')[0]} - ${event} - ${title}`;
@@ -18,9 +19,6 @@
     return '/img/talks/' + getYear(date) + '/' + getSlug(url) + '.jpg';
   }
 </script>
-
-
-<!doctype html>
 <html lang="en">
 <head>
   <meta webc:is="head-commons" webc:nokeep

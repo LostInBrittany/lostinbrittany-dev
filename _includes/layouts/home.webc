@@ -1,3 +1,4 @@
+<!doctype html>
 <script webc:setup>
 
 function filterPostsByLocale(posts, locale) {
@@ -11,8 +12,6 @@ function filterPostsByLocale(posts, locale) {
   return latestPosts;
 }
 </script>
-
-<!doctype html>
 <html lang="en">
 <head>
   <meta webc:is="head-commons" webc:nokeep

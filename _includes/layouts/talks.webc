@@ -1,3 +1,4 @@
+<!doctype html>
 <script webc:setup>
 const talksByYear = {};
 // Group talks by year
@@ -133,8 +134,6 @@ const mapLocations = [...cityByCoords.values()].map(city => ({
 }));
 const mapLocationsJson = JSON.stringify(mapLocations);
 </script>
-
-<!doctype html>
 <html lang="en">
 <head>
   <meta webc:is="head-commons" webc:nokeep
